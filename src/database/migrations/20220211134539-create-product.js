@@ -36,13 +36,25 @@ module.exports = {
         type: Sequelize.STRING
       },
       categoryId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model: 'Categories',
+          key: 'id'
+        }
       },
       colorId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model: 'Colors',
+          key: 'id'
+        }
       },
       brandId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model: 'Brands',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

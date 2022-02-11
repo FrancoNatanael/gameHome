@@ -1,5 +1,7 @@
 const jsonDb = require('../model/jsonDatabase')
 const productModel = jsonDb('products')
+const db = require('../database/models')
+const Products = db.Product
 
 
 
@@ -16,13 +18,30 @@ const productController = {
     all: (req,res)=>{
     
         if(req.session.user){
-            let products = productModel.all()
-            res.render('products/products',{user:req.session.user,products})
+            Products.findAll({include:['brand','color','category']})
+            .then(products =>
+                {
+                    console.log(products)
+                    res.render('products/products',{products})
+                
+                })
+                
         }
 
-        let products = productModel.all()
+
+
+        Products.findAll({include:['brand','color','category']})
+        .then(products =>
+            {
+                console.log(products)
+                res.render('products/products',{products})
+            
+            })
+            
+        /*
         res.render('products/products',{products})
-    
+        */
+            
 },
     edit: (req,res)=>{
 
