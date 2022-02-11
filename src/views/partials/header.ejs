@@ -1,0 +1,129 @@
+<header>
+
+    <section class="barra1">
+
+        <div class="contenedor-logo">
+            <a href="/"><img src="/images/logo-174px.png" alt="logo que dice: Game Home"></a>
+
+         </div>
+        <div class="burger-menu">
+
+          <div class="btn-menu">
+            <label for="btn-menu">☰</label>
+          </div>
+
+            <input type="checkbox" id="btn-menu">
+              <!--<div class="container-menu">-->
+                <div class="cont-menu">
+                  <nav>
+                    <label for="btn-menu">✖️</label>
+                    <% if (typeof user !='undefined') {%>
+                      <div class="datosImg-mobile">
+                        <p>¡Hola, <%= user.firstName %>! </p>
+                      <img src="/images/users/<%= user.image %>"></div>
+                    <a href="/">Inicio</a>
+                    <a href="/usuario/perfil">Perfil</a>
+                    <a href="/products">Productos</a>
+                    <a href="/usuario/logout">Salir</a>
+                    <% }else{%> 
+                    <a href="/">Inicio</a>
+                    <a href="/usuario/login">Iniciar sesión</a>
+                    <a href="/usuario/registro">Registrarse</a>
+                    <a href="/products">Productos</a>
+                    <a href="#">Nosotros</a>
+                    <% }%>
+                  </nav>
+                
+                </div>
+              <!--</div>-->
+        </div>
+        
+        
+        <!--Search-->
+
+        <div class="barra-busqueda" action="#" method="GET">
+
+
+
+            
+          <!--<div class="input"><p></p></div>-->  
+          
+
+            <input type="text" placeholder="buscar" required class="input">
+
+
+            <div class="submit"><i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <% if (typeof user !='undefined') { %>
+          <div class="datosImg">
+            <i class="fas fa-chevron-down"></i>
+            <p>¡Hola, <%= user.firstName %>! </p>
+            <img src="/images/users/<%= user.image %>">
+            
+          
+          <div class="menu-escondido">
+            <p class="p-perfil"><a href="/usuario/perfil">Mi perfil</a></p>
+            <p><a href="/products">Mis productos</a></p>
+            <p><a href="/products">Ventas</a></p>
+            <p><a href="/usuario/logout">Salir</a></p>
+          </div>
+          </div>
+        <% } %>
+        <div class="iconos">
+         
+         
+           <% if (typeof user =='undefined') { %>
+            
+          
+          <a href="/usuario/registro"><i class="fas fa-sign-in-alt"></i></a>
+          <a href="/usuario/login"><i class="far fa-user"></i></a> 
+          <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+          <% } else { %>
+           
+
+            <% } %> 
+           
+          
+            
+
+        </div>
+
+         
+        <!--Para mobile search and shopping cart-->
+
+        <div class="carrito">
+
+          <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+
+        </div>
+    </section>      
+
+
+
+    <section class="barra2">
+
+        <nav>
+         
+                <ul>
+                    <li><a href="/products">Todos los productos</a></li>
+                    <li><a href="#">PC/Notebook</a></li>
+                    <li><a href="#">Armá tu pc</a></li>
+                    <li><a href="#">Audio & Video</a></li>
+                    <a href="/"><i class="fas fa-bell"></i></a>
+                    <a href="/"><i class="fas fa-heart"></i></a>
+                    <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                </ul>
+                <!--<div class="iconos-barra2">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-heart"></i>
+                </div>-->
+                
+        </nav>
+
+    </section>
+
+
+
+</header>

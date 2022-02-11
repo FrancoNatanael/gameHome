@@ -1,0 +1,4 @@
+Usuario de prueba
+
+email: admin@gamehome.com
+password: AdminGame2021

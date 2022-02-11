@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<!--Acá se está incluyendo al HEAD guardado en nuestra carpeta PARTIALS-->
+        
+    <%- include('../partials/head')%>
+<body>
+    
+    <%- include('../partials/header')%> 
+
+
+    <main>
+        <h1>Mi carrito</h1>
+        <br>
+        
+        <article class="articulo">
+            <div class="img-titulo-precio">
+                 <form action="/carrito" method="GET">
+                     <button type="submit" class="tachito"><i class="fas fa-trash-alt"></i></button>
+                 </form>
+            <img class="contenedor-img" src="images/mouse.jpg"  alt="mouse con luces de colores">
+            <h4 class="descripcion">MOUSE GLORIUS MODEL D- MATTE BLACK</h4>
+            <p class="precio">$6000</p>
+
+                <div class="cantidad-input">
+                    <label for="texto-cantidad" class="cantidad">Cantidad</label>
+                    <input type="number" value="1" min="1" max="25">
+                </div>  
+            </div>
+        </article>
+
+
+            <article class="articulo">
+                <div class="img-titulo-precio">
+                    <form action="/carrito" method="GET">
+                        <button type="submit" class="tachito"><i class="fas fa-trash-alt"></i></button>
+                    </form>
+                <img class="contenedor-img" src="/images/notebook-lenovo-14-ideapad.jpg" width="360" alt="Notebook Lenovo">
+                <h4 class="descripcion">NOTEBOOK LENOVO 14" IDEAPAD</h4>
+                <p class="precio">$65.290</p>
+
+                    <div class="cantidad-input">
+                        <label for="texto-cantidad" class="cantidad">Cantidad</label>
+                        <input type="number" value="1" min="1" max="25">
+                    </div>  
+                </div>
+            </article>
+
+            <article class="articulo">
+                <div class="img-titulo-precio">
+                    <form action="/carrito" method="GET">
+                        <button type="submit" class="tachito"><i class="fas fa-trash-alt"></i></button>
+                    </form>
+                <img class="contenedor-img" src="/images/webcam-logitech-hd.jpg" width="360" alt="Notebook Lenovo">
+                <h4 class="descripcion">WEBCAM LOGITECH C922</h4>
+                <p class="precio">$7.290</p>
+                
+                    <div class="cantidad-input">
+                        <label for="texto-cantidad" class="cantidad">Cantidad</label>
+                        <input type="number" value="1" min="1" max="25">
+                    </div>  
+
+                    </div>
+            </article>
+
+            <div class="seguir-comprando">
+                <p><a href='/' class="seguir"><i class="fas fa-chevron-circle-left"></i>Seguir comprando</a></p>
+            </div>
+
+            <!--Resumen de compra-->
+
+            <article class="total">
+                <h2 class="titulos">Resumen</h2>
+                
+                <p class="sub-total">Subtotal:</p>
+                <p class="resultados">$98.443</p>
+                <p class="envio">Envio:</p>
+                <p class="resultados">Gratis</p>
+                <h2 class="titulos">Total:</h2>
+                <p class="resultados">$98.443</p>
+                <button type="submit" value="comprar" class="button">Comprar ahora</button>
+                
+
+
+            </article>
+
+            <%- include('../partials/newsletter')%> 
+    </main> 
+
+
+    <!--Comienza el footer-->
+    
+    <%- include('../partials/footer')%> 
+
+
+
+</body>
+</html>

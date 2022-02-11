@@ -1,0 +1,178 @@
+/*--Contenedor de los registros--*/
+.container{
+    width: 95%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+}
+
+/*--Contenedor del form--*/
+
+.register-container{
+    display: block;
+    width: 450px;
+    height: auto;
+    background:  #fff;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+
+}
+
+/*--Seccion Registro --*/
+
+
+.register, .registerRedes{
+    flex: 1;
+
+}
+
+.register{
+    padding: 40px;
+    position: relative;
+    /*
+    background-image: linear-gradient(to bottom right ,#8d53fd,#2757ff);
+    */
+    
+}
+
+.register h2{
+    color: #2e2d2d;
+    margin-bottom: 30px;
+    text-shadow: 0px 0px 0px #000000;
+}
+
+.register input{
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    border-top-style:none ;
+    border-left-style:none;
+    border-right-style:none;
+    border-bottom: 1px solid #a8a8a8;
+    color: #333;
+}
+.register input:active,
+.register input:focus{
+    outline: none;
+}
+
+.register .submit{
+    width: 100%;
+    padding: 10px;
+    background:linear-gradient(to right ,#72d129,#87f234,#faeb52) ;
+    color:#000000 ;
+    font-size: 16px;
+    box-shadow:2px 2px 7px 1px #3c3c3c;
+    text-shadow: 0px 1px 1px #000000;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/*--FlechaCircular--*/
+.register::after{
+    content: '>';
+    position:absolute ;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    right: -23px;
+    text-align: center;
+    font-size: 19px;
+    background:#87f234;
+    border-radius: 50%;
+    transform: translateY(-50%)rotate(90deg);
+    box-shadow:-1px 1px 3px 1px rgba(0, 0, 0, .2) ;
+    color: #000;
+    top: unset;
+    bottom: -25px;
+    left: 48%;
+}
+
+
+/*--Registro redes--*/
+
+.registerRedes{
+background-image: linear-gradient(to bottom right ,#faeb52,#87f234);
+padding: 40px;
+}
+
+.registerRedes h2{
+    color:#fff ;
+    text-shadow: black;
+    margin-bottom: 45px;
+}
+
+.registerRedes button i{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.registerRedes button{
+ width: 100%;
+ margin: 15px 0px;
+ padding: 10px;
+box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2) ;
+cursor: pointer;
+position: relative;
+}
+
+.registerRedes .gg{
+    background-color: rgb(216, 30, 30);
+    border-style: none;
+    color: #fff;
+}   
+
+
+
+.registerRedes .fb{
+    background: #3b5999;
+    border-style: none;
+    color: #fff;
+  }
+   
+  .registerRedes .tw{
+    background: #55acef;
+    border-style: none;
+    color: #fff;
+  }
+   
+  .registerRedes .ig{
+    background:linear-gradient(to bottom right ,#911191,#a7338a);
+    border-style: none;
+    color: #fff;
+  }
+   .iniciar-sesion{color :#000;
+    }
+
+
+  
+  /*--MEDIA 700--*/
+  
+  @media (min-width:700px){
+
+ 
+    /*--REGISTRO--*/
+
+   .register-container{
+    display: flex;
+    width: 650px;
+    height: auto;
+    background:  #fff;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+
+}
+.register::after{
+    display: block;
+    transform: translateX(-50%);
+    top: unset;
+    bottom: 50%;
+    left: 100%;
+    
+    }
+
+}

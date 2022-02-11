@@ -1,0 +1,238 @@
+/*------MAIN---------*/
+
+.producto-principal{
+    width: 90%;
+    margin: auto;
+}
+.producto-principal img{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.producto-principal .datos-producto h2{
+    font-size: 30px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    padding: 10px;
+}
+.producto-principal .datos-producto .breve-descripcion{
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px gray solid;
+}
+
+.producto-principal .datos-producto .precio-del-producto{
+    padding: 10px;
+    font-size: 25px;
+    text-align: left;
+    border-bottom: 1px gray solid;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.producto-principal .datos-producto .iconos-texto{
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px gray solid;
+    color: rgb(28, 170, 28);
+}
+
+.producto-principal .datos-producto i{
+    margin-right: 7px;
+    
+}
+
+.producto-principal .datos-producto p{
+    margin-bottom: 15px;
+}
+
+.producto-principal form button{
+    padding: 6px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 75%;
+    max-width: 470px;
+    font-size: 16px;
+   
+}
+
+.producto-principal form .agregar-boton{
+    background-color: rgb(214, 214, 214);
+    border: none;
+    transition: all 0.4s;
+}
+.producto-principal form button:hover{
+    opacity: 0.9;
+    padding: 10px;
+    cursor: pointer;
+}
+.producto-principal form .editar-boton{
+    border: none;
+    background-color: #87f234;
+    color: white;
+    transition: all 0.4s;
+}
+
+.producto-principal form .eliminar-boton{
+    background-color: rgba(255, 38, 0, 0.844);
+    color: white;
+    border: none;
+    transition: all 0.4s;
+}
+
+
+main .caracteristicas{
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+main .caracteristicas h3{
+    padding: 10px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 25px;
+}
+main .caracteristicas ul{
+    list-style: none;
+    font-size: 20px;
+}
+main .caracteristicas .color1{
+    padding: 5px;
+    background-color: gray;
+    width: 90%;
+    color: white;
+}
+main .caracteristicas .color2{
+    padding: 5px;
+    width: 90%;
+}
+
+
+
+
+main .ofertas{
+    display: none;
+}
+.ofertas-titulo{
+  display: none;
+
+
+}
+
+
+
+@media (min-width:1000px){
+   
+   /*------MAIN---------*/
+   
+   main .producto-principal{
+       
+       display: flex;
+       width: 75%;
+       margin-top: 40px;
+       margin-bottom: 80px;
+   }
+   main .producto-principal img{
+       width: 70%;
+       margin-right: 8px;
+   }
+   
+   main .caracteristicas{
+       margin: auto;
+       width: 55%;
+       text-align: left;
+       margin-bottom: 100px;
+   }
+   .ofertas-titulo{
+       display: block;
+       font-weight: normal;
+       margin-left: 30px;
+       font-size: 24px;
+       text-decoration: underline;
+   
+   
+   }
+   
+   
+   main .ofertas{
+       display: flex;
+       justify-content: space-around;
+       margin-top: 50px;
+       margin-bottom: 150px;
+       
+   }
+   main .ofertas article img{
+       width: 100%;
+       border-bottom: solid 1px rgb(228, 227, 227);
+       padding: 10px;
+       
+   }
+   
+   main .ofertas article{
+       border: rgb(228, 227, 227) solid 1px;
+       width: 20%;
+       padding: 5px;
+       transition: all 0.4s;
+   }
+   main .ofertas article:hover{
+       box-shadow: 1px 0px 10px #0501f1;
+   }
+   .ver-mas{
+   
+       background: rgb(255,255,255);
+       background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(140,140,140,1) 100%);
+       border: 1px solid black;
+       padding: 6px;
+       font-size: 15px;
+       border-radius: 3px;
+       transition-property: background-color, font-size; 
+       transition-duration: 0.3s;
+   }
+   
+   .ver-mas:hover{
+       background-color: #FFF;
+       font-size: 18px;
+       box-shadow: 1px 0px 10px #00ff7b8c;
+   }
+   
+   main .ofertas article .nombre-precio-mas{
+       padding: 10px;
+   }
+   main .ofertas article .nombre-precio-mas .nombre{
+       margin-bottom: 5px;
+       font-size: 15px;
+   }
+   main .ofertas article .nombre-precio-mas .precio{
+       margin-bottom: 8px;
+       font-size: 19px;
+   }
+   
+   main .ofertas article .nombre-precio-mas a{
+       
+       color: black;
+       text-decoration: none;
+       font-weight: bold;
+       padding: 6px;
+       font-size: 15px;
+       border-radius: 2px;
+       
+   }
+   main .ofertas article .nombre-precio-mas .ver-mas{
+       text-align: center;
+   }
+   
+   
+   
+   
+}
+
+
+
+

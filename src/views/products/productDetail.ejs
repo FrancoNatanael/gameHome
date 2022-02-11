@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head')%> 
+<body>
+   
+
+    <%- include('../partials/header')%> 
+
+    <main>
+
+
+        <section class="producto-principal">
+            
+            <img src="/images/<%=producto.image%>" alt="foto del producto">
+
+            <article class="datos-producto">
+                <h2><%= producto.name%></h2>
+
+                <p class="breve-descripcion"><%= producto.description%></p>
+                <p class="precio-del-producto"><%= producto.price%></p>
+
+                <div class="iconos-texto">
+
+
+               <p> <i class="fas fa-shield-alt"></i>Garantia - 12 meses </p>
+               <p>  <i class="fas fa-check"></i>Stock disponible</p>
+                <p> <i class="fas fa-truck-moving"></i>Envios a todo el pais</p>
+            </div>
+
+            <form action="/carrito" method="get">
+                    <button type="submit" name="" id="" value="Sumar al carrito" class="agregar-boton">Agregar al carrito</button>
+                </form>
+                    
+                <% if (typeof user !='undefined') {%>
+                    <form action="/products/<%=producto.id%>/edit" method="get">
+                        <button type="submit" name="" id="" class="editar-boton">Edición de producto</button>
+                     </form>
+
+                     <form action="/products/delete/<%=producto.id%>?_method=delete" method="POST">
+                        <button type="submit" class="eliminar-boton">ELIMINAR</button>
+                    </form>
+                    <% }%>
+            </article>
+        </section>
+
+        <section class="caracteristicas">
+            <article>
+                <h3>Caracteristicas generales</h3>
+                <ul>
+                    <li class="color1">Nombre : <%= producto.name%></li>
+                    
+                    
+                  <li class="color2">Precio : <%= producto.price%></li>
+                    <li class="color1">Categoria :<%= producto.category%> </li>
+                    <li class="color2">Categoria :<%= producto.description%> </li>
+                   
+                </ul>
+
+                
+
+            </article>
+        </section>
+
+
+        <%- include('../partials/ofertas')%> 
+
+
+        <%-   include('../partials/newsletter')%> 
+    
+
+
+    </main>
+
+
+    <%- include('../partials/footer')%> 
+
+</body>
+</html>

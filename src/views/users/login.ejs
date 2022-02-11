@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/head')%> 
+
+<body>
+
+    <%- include('../partials/header')%> 
+
+   <main>
+
+   <!--FORMULARIO DE REGISTRO-->
+    <div class="container">
+        <div class="login-container">
+            
+
+        
+            <div class="login">
+                <h2>Iniciar con redes</h2>
+                <div class="login-items">
+
+                    <button class="gg"><i class="fab fa-google"></i> Iniciar con Google</button>
+
+                    <button class="fb"><i class="fab fa-facebook-f"></i> Iniciar con Facebook</button>
+
+                    <button class="tw"><i class="fab fa-twitter"></i> Iniciar con Twitter</button>
+
+                    <button class="ig"><i class="fas fa-camera"></i> Iniciar con Instagram</button>
+
+                </div>
+
+            </div>
+            <div class="register">
+                <h2>Iniciar sesión</h2>
+                <form action="/usuario/login" method="POST">
+
+                    <input type="email" name="email" class="nombre" placeholder="Ingresá tu email" >
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="feedback" style="color: red;font-size: 14px;"><%= errors.email.msg %>  </p>
+                    <% } %>
+
+                    <input type="password" name="password" class="contrasenia" placeholder="Contraseña" >
+                    <% if (locals.errors && errors.password) { %>
+                        <p class="feedback" style="color: red;font-size: 14px;"><%= errors.password.msg %>  </p>
+                    <% } %>
+
+                    <div class="recordarLogin">
+                        <label for="recordar">Recordar usuario<input type="checkbox" name="recordarLogin"></label>
+                    </div>
+
+                    <button type="submit" class="submit">INICIAR SESIÓN</button>
+
+
+
+                    <p class="link"><a href="/">¿Olvidaste la contraseña?</a></p><br>
+                    <div class="registrate"><p class="link">¿No tienes cuenta? <a href="/usuario/registro">¡Registrate!</a></p></div>
+
+                </form>    
+            </div>
+
+        </div>
+    </div>
+
+
+
+   </main>
+
+   <%- include('../partials/footer')%>
+
+</body>
+</html>

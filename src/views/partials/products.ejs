@@ -1,0 +1,28 @@
+<h3 class="titulo-ofertas">¡Todos nuestros productos!</h3>
+<section class="que-estas-buscando">
+
+    <% for(let i=0;i<products.length;i++){ %>
+     
+        
+             
+           
+ 
+     
+ 
+
+     <article>
+        
+        <img src="/images/<%=products[i].image%>"alt="">
+
+        <div class="nombre-precio-mas">
+
+        <p class="nombre"><%= products[i].name%></p>
+        <p class="precio"><%= products[i].price%></p>
+        <p class="ver-mas"><a href="/products/<%=products[i].id%>">Ver mas</a></p>
+    </div>
+
+    </article>
+    <% } %>
+    
+
+</section>

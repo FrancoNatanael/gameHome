@@ -1,0 +1,67 @@
+
+
+
+.contenido-perfil{
+    margin: auto;
+    width: 80%;
+    
+}
+.contenido-perfil img{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 70%;
+    max-width: 300px;
+}
+.contenido-perfil .avatar{
+    display: block;
+    margin: auto;
+    width: 65%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.perfil-img p{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+
+.perfil-img input{
+    margin-top: 5px;
+}
+
+.perfil-datos-usuario form .campo-perfil{
+    margin-top: 15px;
+}
+.perfil-datos-usuario form .campo-perfil input{
+    padding: 2%;
+}
+
+.perfil-datos-usuario form button{
+    margin-top: 20px;
+}
+
+
+@media (min-width:800px){
+
+    
+.contenido-perfil{
+   display: flex;
+   justify-content: space-around;
+   margin-top: 30px;
+  
+    
+}
+.contenido-perfil .perfil-img{
+    margin-top: 34px;
+}
+.perfil-datos-usuario{
+    padding: 50px;
+}
+.perfil-datos-usuario form .campo-perfil{
+    margin-top: 25px;
+}
+
+}

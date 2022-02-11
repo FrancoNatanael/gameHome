@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+
+    <%- include('../partials/head')%>  
+
+<body>
+    <%- include('../partials/header')%> 
+    <main>
+         <!--FORMULARIO DE REGISTRO-->
+    <div class="container">
+        <div class="register-container">
+            
+            <div class="register">
+                <h2>Registrarse</h2>
+                
+                <form action="/usuario/registro" method="POST" id="form"
+                    enctype="multipart/form-data">
+
+
+                    <input type="text" name="firstName" class="nombre" placeholder="Nombre" value="<%= locals.old ? old.firstName : null %>">
+                    <% if (locals.errors && errors.firstName) { %>
+                        <p class="feedback" style="color: red;font-size: 14px;"><%= errors.firstName.msg %>  </p>
+                    <% } %>
+
+                    <input type="text" name="lastName" class="nombre" placeholder="Apellido"  value="<%= locals.old ? old.lastName : null %>">
+                    <% if (locals.errors && errors.lastName) { %>
+                        <p class="feedback" style="color: red;font-size: 14px;"><%= errors.lastName.msg %>  </p>
+                    <% } %>
+
+                    <input type="text" name="email" class="correo" placeholder="Correo electrónico"  value="<%= locals.old ? old.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="feedback" style="color: red;font-size: 14px;"><%= errors.email.msg %> </p>
+                    <% } %>
+
+                    <input type="date" id="start" name="date" value="2020-12-12"min="1995-01-01" max="2030-12-12" >
+
+                    <input type="password" name="password" class="contraseña" placeholder="Contraseña"  value="<%= locals.old ? old.password : null %>">
+                    <% if (locals.errors && errors.password) { %>
+                        <p class="feedback" style="color: red;font-size: 14px;"><%= errors.password.msg %></p>
+                    <% } %>
+
+                    <input type="file" name="avatar" class="nombre" placeholder="Nombre">
+
+                    
+
+
+               
+                    <button class="submit" type="submit" >REGISTRARSE</button> <br>
+                    
+
+                    <div class="iniciar-sesion"><p class="link">¿Ya tienes cuenta? <a href="/usuario/login">Iniciar sesión</a></p></div>
+
+                </form>    
+            </div>
+          
+            <div class="registerRedes">
+                <h2>Registro con redes</h2>
+                <div class="login-items" >
+
+                    <button class="gg"><i class="fab fa-google"></i> Registrarse con Google</button>
+
+                    <button class="fb"><i class="fab fa-facebook-f"></i> Registrarse con Facebook</button>
+
+                    <button class="tw"><i class="fab fa-twitter"></i> Registrarse con Twitter</button>
+
+                    <button class="ig"><i class="fas fa-camera"></i> Registrarse con Instagram</button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    </main>
+
+    <%- include('../partials/footer')%>
+
+</body>
+
+</html>

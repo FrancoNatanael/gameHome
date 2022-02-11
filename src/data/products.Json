@@ -1,0 +1,135 @@
+[
+ {
+  "name": "Mouse Glorious Model D Minus - Matte Black",
+  "category": "Pc/Notebook",
+  "price": "$6.000",
+  "section": "destacado",
+  "description": "id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum",
+  "id": "1",
+  "image": "mouse.jpg"
+ },
+ {
+  "name": "Silla Gamer HHGears SM-115 Negro",
+  "category": "Pc/Notebook",
+  "price": "$20.000",
+  "section": "destacado",
+  "description": "nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat",
+  "id": "3",
+  "image": "silla-product.jpg"
+ },
+ {
+  "name": "Auriculares HyperX Cloud Orbit S 7.1 3D Planar",
+  "category": "Pc/Notebook",
+  "price": "$29.910",
+  "section": "ofertas",
+  "description": "Auriculares marca Hyper X, en color negro/gris, cuenta con usb, microfono y conectividad Android por Mini Plug,PC,Nintendo Switch,PS4,Xbox One",
+  "id": "5",
+  "image": "auriculares.jpg"
+ },
+ {
+  "name": "Auriculares HyperX Cloud Orbit S 7.1 3D Planar",
+  "category": "Pc/Notebook",
+  "price": "$29.910",
+  "section": "destacado",
+  "description": "Auriculares marca Hyper X, en color negro/gris, cuenta con usb, microfono y conectividad Android por Mini Plug,PC,Nintendo Switch,PS4,Xbox One",
+  "id": "6",
+  "image": "auriculares.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Auriculares HyperX Cloud Orbit S 7.1 3D Planar",
+  "description": "Auriculares marca Hyper X, en color negro/gris, cuenta con usb, microfono y conectividad Android por Mini Plug,PC,Nintendo Switch,PS4,Xbox One",
+  "image": "auriculares.jpg",
+  "category": "Audio",
+  "price": "$29.910"
+ },
+ {
+  "id": 8,
+  "name": "Auriculares HyperX Cloud Orbit S 7.1 3D Planar",
+  "description": "Auriculares marca Hyper X, en color negro/gris, cuenta con usb, microfono y conectividad Android por Mini Plug,PC,Nintendo Switch,PS4,Xbox One",
+  "image": "auriculares.jpg",
+  "category": "Audio",
+  "price": "$29.910"
+ },
+ {
+  "name": "Monitor Samsung 19\" A330 HD 60Hz",
+  "category": "Pc/Notebook",
+  "price": "20.030",
+  "section": "ofertas",
+  "description": "Monitor Samsung 19\" A330 HD 60Hz",
+  "id": "9",
+  "image": "image-1640012080312.jpg"
+ },
+ {
+  "name": "WebCam Logitech C922 USB Full Hd Pro Stream c/Trip",
+  "category": "Pc/Notebook",
+  "price": "8.560",
+  "section": "todos",
+  "description": "WebCam Logitech C922 USB Full Hd Pro Stream c/Trip",
+  "id": "10",
+  "image": "image-1640008493863.jpg"
+ },
+ {
+  "name": "WebCam Logitech BRIO 4K Ultra HD ",
+  "category": "Video",
+  "price": "19.000",
+  "section": "destacado",
+  "description": "WebCam Logitech BRIO 4K Ultra HD ",
+  "image": "image-1640008594014.jpg",
+  "id": 11
+ },
+ {
+  "name": "Notebook ASUS X509 15.6\" N4020 4GB 500GB FREE DOS",
+  "category": "Pc/Notebook",
+  "price": " 51.090",
+  "section": "destacado",
+  "description": "Notebook ASUS X509 15.6\" N4020 4GB 500GB FREE DOS",
+  "id": "12",
+  "image": "image-1640008695895.jpg"
+ },
+ {
+  "name": "Notebook Lenovo V15 15.6\" Core i5-1035G1 4GB 1TB Free DOS",
+  "category": "Pc/Notebook",
+  "price": "83.340",
+  "section": "destacado",
+  "description": "Notebook Lenovo V15 15.6\" Core i5-1035G1 4GB 1TB Free DOS",
+  "image": "image-1640008797300.jpg",
+  "id": 13
+ },
+ {
+  "name": "Microfono HyperX QuadCast Streaming PC PS4 Condensador",
+  "category": "Audio",
+  "price": "13.920",
+  "section": "ofertas",
+  "description": "Microfono HyperX QuadCast Streaming PC PS4 Condensador",
+  "image": "image-1640012399117.jpg",
+  "id": 14
+ },
+ {
+  "name": "Microfono HyperX QuadCast S Streaming PC PS4 Condensador",
+  "category": "Audio",
+  "price": "20.800",
+  "section": "ofertas",
+  "description": "Microfono HyperX QuadCast S Streaming PC PS4 Condensador",
+  "image": "image-1640012483141.jpg",
+  "id": 15
+ },
+ {
+  "name": "Gabinete Kolink Citadel Mesh RGB 3xCoolers ARGB Vidrio Templado",
+  "category": "Periféricos/componentes",
+  "price": "9.600",
+  "section": "destacado",
+  "description": "Gabinete Kolink Citadel Mesh RGB 3xCoolers ARGB Vidrio Templado",
+  "id": "16",
+  "image": "image-1640132573371.jpg"
+ },
+ {
+  "name": "Teclado Mecanico Glorious GMMK Full Size RGB (Pre-Built)",
+  "category": "Periféricos/componentes",
+  "price": "13.340",
+  "section": "destacado",
+  "description": "Teclado Mecanico Glorious GMMK Full Size RGB (Pre-Built)",
+  "image": "image-1640132659635.jpg",
+  "id": 17
+ }
+]

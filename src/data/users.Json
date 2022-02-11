@@ -1,0 +1,110 @@
+[
+ {
+  "id": 1,
+  "firstName": "Flor",
+  "lastName": "dldldl",
+  "email": "flora@flora.com",
+  "date": "2020-12-12",
+  "password": "$2a$10$f8S.ub5AEyeE.Oadz6e42esbuKBFrC4OZKy24H9fGbQ/TBoEd9EOG",
+  "image": "default-image.png"
+ },
+ {
+  "firstName": "Flor",
+  "lastName": "Farias",
+  "email": "correo@correo.com",
+  "date": "2020-12-12",
+  "password": "$2a$10$QKqTl3xPlotfimAYoPNX4OWr8GxWc0T6EJ.RvMe8vQ1vFsmDTVeo2",
+  "image": "default-image.png",
+  "id": 2
+ },
+ {
+  "firstName": "Flor",
+  "lastName": "Farias",
+  "email": "juan@juan.com",
+  "date": "2020-12-12",
+  "password": "$2a$10$vyc.JZT8bAA2YM/4xJhp0.xo0vpyw9Amqsj5n5FIfr9SQsUCN0Wpq",
+  "image": "default-image.png",
+  "id": 3
+ },
+ {
+  "firstName": "Franco",
+  "lastName": "Tomaino",
+  "email": "natanaeltomaino@hotmail.com",
+  "date": "2020-12-12",
+  "password": "$2a$10$cqtpadt1h530EVJxsPayP.Z5n1eSkwBABZSF2sxBgHMqqPpmUpLEu",
+  "image": "default-image.png",
+  "id": 4
+ },
+ {
+  "firstName": "d",
+  "lastName": "d",
+  "email": "tomainofranco5@gmail.com",
+  "date": "2020-12-12",
+  "password": "$2a$10$S5js.7IELHTvVoTAV1ZumemyZqIlCHknVYt8C3OIVRhTN.A369VuW",
+  "image": "default-image.png",
+  "id": 5
+ },
+ {
+  "firstName": "franco",
+  "lastName": "r",
+  "email": "natanaeltomaino@hotmail.com",
+  "date": "2020-12-12",
+  "password": "$2a$10$bd80Jb3shCrAAghSfJ08mOJPoopn6uZKQ2YX2hRn2TYfv83ev.fV.",
+  "image": "default-image.png",
+  "id": 6
+ },
+ {
+  "name": "Franco",
+  "last_name": "Tomaino",
+  "email": "natanaeltomaino@hotmail.com",
+  "date": "2020-12-12",
+  "password": "$2a$10$C/T9NNMWqDUH6006mHkpJuOeYd1gOHdl1Aa9m/YBLjKqZfrZGVidi",
+  "id": 7,
+  "image": "avatar-1642721892621.jpeg"
+ },
+ {
+  "firstName": "Flor",
+  "lastName": "Farias",
+  "email": "res@res.com",
+  "date": "2020-12-12",
+  "password": "$2a$10$sq.sCatkIl1p1j2LynnrN.PfoEPaGSLShHI5cGxjujCA/RDxDaAUW",
+  "image": "default-image.png",
+  "id": 8
+ },
+ {
+  "firstName": "eze",
+  "lastName": "pp",
+  "email": "ee@ss",
+  "date": "2020-12-12",
+  "password": "$2a$10$ofzdDN74w51525UOxbv9l.QH/o/cBXLCKPAoQgdgXwYukGeGCceSW",
+  "image": "avatar-1642806228477.png",
+  "id": 9
+ },
+ {
+  "firstName": "Franco",
+  "lastName": "Tomaino",
+  "email": "tomainofranco5@gmail.com",
+  "date": "2020-12-12",
+  "password": "$2a$10$y8mRQZM1knnR6YyRznruzuBMTWwW0Vcr3Btco94tRJFdr50upkYs6",
+  "image": "default-image.png",
+  "id": 10
+ },
+ {
+  "firstName": "Franco",
+  "lastName": "Tomaino",
+  "email": "natanaeltomaino@hotmail.com",
+  "date": "2020-12-12",
+  "password": "$2a$10$G9GXcjSR1etZQgODic6LaOkkV9YpXNl.uSyxk2aJ7dxu4Qlx1csHu",
+  "image": "avatar-1643030995837.PNG",
+  "id": 11
+ },
+ {
+  "firstName": "Admin",
+  "lastName": "Admin",
+  "email": "admin@gamehome.com",
+  "date": "2020-12-12",
+  "password": "$2a$10$7fTCIvSee0nB3g6ZUQlYNOrCezSyXMxdJA8zMv0lR2/SQE5iOSaEW",
+  "image": "avatar-1643569988061.jpg",
+  "id": 12
+ }
+]

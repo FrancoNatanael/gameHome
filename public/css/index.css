@@ -1,0 +1,1044 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /*MOBILE*/
+
+/*---------HEADER--------*/
+
+body{
+    background: rgb(26,10,45);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 7%, rgba(10,8,61,1) 57%);
+    font-family: Montserrat, sans-serif;;
+    color: white;
+}
+
+
+.barra1{
+    width: 100%;
+    height: 110px;
+    /*border: solid 1px red;*/
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(197, 191, 191);
+    
+    
+}
+
+.barra1 img{
+   
+    width: 20vw;
+    left: 79%;
+}
+.contenedor-logo{
+    width: 200px;
+    height: 109px;
+    bottom: 1px;
+
+}
+
+
+/*carrito*/
+
+.barra1 .carrito i{
+    position: absolute;
+    font-size: 21px;
+    border-radius: 4px;
+    right: 10%;
+    margin-top:2px;
+    padding: 10px;
+    color:#FFF;
+}
+
+/*Menù lateral*/
+#btn-menu{
+    display: none;
+}
+
+.datosImg{
+    display: none;
+}
+
+/*burguer menu*/
+.btn-menu{
+    position: absolute;
+    font-size: 23px;
+    right: 2%;
+    margin-top: 6px;
+}
+
+/*.container-menu{
+    position: absolute;
+    /*background: rgba(18, 1, 49, 0.568);
+    width: 100%;
+    height: auto;
+    top: 0%;
+    
+    opacity: 0;
+    visibility: hidden;
+}/*/
+
+#btn-menu:checked ~ .cont-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.datosImg-mobile{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: #e7dddd;
+    border-bottom:1px solid white ;
+    border-left: 5px solid transparent;
+	transition: all 400ms ease;
+    margin-top: -80px;
+}
+/*Para el contenedor del buruger menu*/
+.cont-menu{
+    width: 55.5%;
+    max-width: 400px;
+    /*background: #28164d;*/
+    background: #5529ac;
+    opacity: 1;
+    height: 100vh;
+    transition: all 500ms ease;
+    transform: translateX(10%);
+    z-index: 1;
+    position: absolute;
+    bottom: 0%;
+    top: 0%;
+    left:39%;
+    right: 0%;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.cont-menu nav{
+    transform: translateY(45%);
+}
+
+/*Para las fuentes*/
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: #e7dddd;
+    border-bottom:1px solid white ;
+    border-left: 5px solid transparent;
+	transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-right: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+	color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    
+}
+
+/*Fin de Burger-btn*/
+
+
+.barra1 .barra-busqueda{
+    display: flex;
+    align-items: center;
+    margin-bottom:69px;
+    margin-right:27%;
+    margin-top: 3px;
+}
+.submit i{
+    right: 25px;
+}
+.barra1 .barra-busqueda .input{
+    height: 22px;
+    font-size: 10px;
+    border: solid 2px rgb(197, 191, 191);
+    padding: 6px;
+    border-radius: 9px;
+    text-align: center;
+    margin-right:7px ;
+    
+}
+
+
+.barra1 .iconos{
+    display: none;
+}
+
+.iconos{
+    color: white;
+    
+}
+/*Sub menu2*/
+
+
+
+.barra2 nav ul{
+    display: none;
+}
+.iconos-barra2 i{
+    display: none;
+
+}
+
+
+
+/*------MAIN------*/
+
+
+
+main a{
+    width: auto;
+}
+main .imagen-gamer{
+    margin-top: 6px;
+    width: 100%;
+    height: 30vw;
+}
+
+
+body main .categorias-destacado{
+    width: 80%;
+    margin: auto;
+    margin-right: 7%;
+}
+body main .categorias-destacado .destacado02{
+    width: 100%;
+    
+    margin-left: 1%;
+    
+}
+body main .categorias-destacado .destacado02 img{
+    width:90%;
+    border: #2757ff solid 1px; 
+    
+    margin-left: 5%;
+}
+body main .categorias-destacado .categorias02{
+       
+    
+    width: 100%;
+    margin-left: 1%;
+}
+
+body main .categorias-destacado .categorias02 img{
+    width: 100%;
+    height: 85px;
+    border: #2757ff solid 1px;  
+    
+    
+}
+body .mobile{
+    display: none;
+}
+
+
+/* Hasta aca llega la seccion de destacado y categorias con imagenes*/
+
+
+
+
+h3.titulo{
+    text-align: center;
+    font-weight: normal;
+    
+    font-size: 23px;
+    margin-top: 30px;
+    margin-bottom: -30px;
+}
+h3.titulo-ofertas{
+    text-align: center;
+    font-weight: normal;
+    
+    font-size: 23px;
+    margin-top: 30px;
+    margin-bottom: -30px;
+}
+h3.titulo-ofertas{
+    display: none;
+}
+
+
+
+/*Seccion de lo mas destacado con una imagen en mobile cuatro en tablet y pchp en desktop*/
+
+body main .que-estas-buscando{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+    /*border: solid 1px green;*/
+
+
+}
+
+
+
+body main .que-estas-buscando h3{
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-weight: normal;
+}
+
+
+body main .que-estas-buscando img{
+   /* width: 80%;
+    margin-left: 30px;
+    border: solid 1px red;*/
+    width: 100%;
+    border-bottom: solid 1px rgb(228, 227, 227);
+    padding: 10px;
+}
+
+body main .que-estas-buscando article{
+    /*margin: auto;
+    border: solid 1px red;
+    width: 85%;
+    margin-top: 10px;*/
+    border: rgb(228, 227, 227) solid 1px;
+    width: 80%;
+    padding: 5px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+body main  .que-estas-buscando .nombre-precio-mas{
+    padding: 10px;
+}
+
+body main .nombre-precio-mas .nombre{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+body main article .nombre-precio-mas .precio{
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+body main article .nombre-precio-mas a{
+    
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 2px;
+    
+}
+
+
+body main article .nombre-precio-mas .ver-mas{
+    text-align: center;
+}
+
+.ver-mas{
+
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(140,140,140,1) 100%);
+    border: 1px solid black;
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 3px;
+    transition-property: background-color, font-size; 
+    transition-duration: 0.3s;
+}
+
+.ver-mas:hover{
+    background-color: #FFF;
+    font-size: 18px;
+    box-shadow: 1px 0px 10px #00ff7b8c;
+}
+
+
+
+
+/*Seccion de banners*/
+
+main .banners{
+    width: 95%;
+    
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: -85px;
+}
+main .banners img{
+    width: 100%;
+    margin-top: 1px;
+    height: 90px;
+}
+
+
+main .ofertas{
+    display: none;
+}
+
+
+/*----NEWSLETTER-----*/
+
+.suscribirse{
+    width: 100%;
+    padding: 10px;
+    margin-top: 140px;
+    margin-bottom: -80px;
+    
+}
+
+.suscribirse .enterate-novedades h3{
+    
+    font-weight: normal;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.suscribirse .enterate-novedades p{
+    display: none;
+}
+
+.suscribirse .correo-suscripcion{
+    padding: 2px;
+    width: 100%;
+    margin: auto;
+    
+    
+}
+
+.suscribirse .correo-suscripcion input{
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: none;
+   width: 50%;
+   margin-left: 5px;
+   margin-right: 20px;
+}
+
+.suscribirse .correo-suscripcion button{
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 6px;
+    color: rgb(67, 67, 67);
+    border: none;
+    background-color: #FFF;
+
+}
+
+
+
+
+
+
+
+
+
+/*------FOOTER---------*/
+footer{
+    margin-top: 20px;
+}
+footer .seccion1{
+    padding: 5px;
+    margin-top: 100px;
+    
+    margin-right: 5px;
+    width: 100%;
+    text-align: center;
+    /*background-color: rgb(228, 227, 227);*/
+    border-top: solid 1px rgb(228, 227, 227);
+}
+footer  img{
+ 
+    display: none;
+   
+}
+
+footer .seccion1 .productos,.contacto,.redes{
+    margin-top: 30px;
+   
+    
+}
+footer .seccion1 .productos,.contacto{
+   margin-left: 12px;
+
+}
+footer .seccion1 h5{
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+footer .seccion1 p{
+    margin-bottom: 7px;
+    font-size: 15px;
+    text-align: justify;
+}
+footer .seccion1 .redes{
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+footer .seccion2{
+    display: flex;
+    padding: 7px;
+    justify-content: space-between;
+    background-color: black;
+    color: rgb(228, 227, 227);
+
+}
+
+
+@media (min-width:700px){
+
+    /*TABLET*/
+
+     /*------HEADER---------*/
+
+
+     .barra1 img{
+        display: block;
+        width: 85%;
+
+     }
+    .burger-menu{
+        display: none;
+    }
+    
+.barra1 .barra-busqueda{
+
+    margin-left: 0;
+    margin-top: 56px;
+    margin: auto;
+}
+
+    .barra1 .barra-busqueda .input{
+        
+        margin-right: 5px;
+        width: 25vw;
+        height: 30px;
+        font-size: 12px;
+        border: solid 2px#87f234;
+        padding: 6px;
+        border-radius: 15px;
+        text-align: center;
+    }
+    .barra1 .iconos{
+        display: block;
+        margin-top: 15px;
+        width: 16%;
+        
+        
+    }
+
+    .barra1 .iconos i{
+        font-size: 25px;
+        margin-right: 5%;
+        margin-top: 28px;
+        color:#87f234;
+        
+
+    }
+    .barra1 .carrito i{
+        display: none;
+    }
+    .datosImg{
+        margin-right:-120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 15%;
+        
+
+        }
+    .datosImg img{
+        width: 50px;
+        height:50px;
+        border-radius:50%;
+        border: #87f234 solid 1px;   
+        box-shadow: 1px 1px 1px #faeb52;
+    }
+    .menu-escondido{
+        background: #5529ac;
+        z-index: 3;
+        height: auto;
+        position: absolute;
+        width: 14.9%;
+        top: 110px;
+        padding: 3px;
+        display: none;
+        transition: all 0.7s;
+        border:1px solid rgb(58, 57, 57);
+        transition: all 0.3s ease-in;
+    }
+    .menu-escondido:hover{
+        transition: all 0.5s;
+    }
+    .menu-escondido .p-perfil{
+        border-bottom: solid 1px white;
+
+        
+    }
+    .menu-escondido p{
+       
+        padding: 5px 5px 5px 10px;
+        border-bottom: 1px solid snow;
+        
+        
+    }
+    .menu-escondido  a{
+        text-decoration: none;
+        color:white;
+        transition: all 0.5s;
+    }
+    .menu-escondido a:hover{
+        opacity: 0.3;
+        transition:all 0.3s ;
+        
+    }
+    .datosImg:hover{
+        cursor: pointer;
+        transition: 5s;
+    }
+    .datosImg:hover i{
+        color:  #5529ac;
+        
+       /*transition: all 0.3s ease-in;*/
+    }
+    
+    .datosImg:hover .menu-escondido{
+        display: block;
+        transition: all 1s;
+    }
+   .barra2 i{
+
+        font-size: 15px;
+        color:#87f234;
+    }
+    
+
+    
+    .barra2 nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+        padding: 10px;
+        background:#000;
+    }
+    .barra2 nav ul li {
+        
+        list-style: none;
+    }
+    .barra2 nav ul li a{
+        text-decoration:none;
+        color: #FFF;
+        transition: all 0.5s;
+    }
+
+
+    .iconos-barra2 i{
+        border: 1px solid wheat;
+        display: block;
+
+    }
+
+    
+/*------MAIN---------*/
+
+
+    .descripcion{
+        font-size: 15px;
+        margin: auto;
+
+    }
+    .precio{
+
+        margin-right: 15%;
+    }
+    .cantidad-input{
+        width: 10%;
+        margin-top: 10%;
+}
+
+
+/*------MAIN---------*/
+
+    
+   
+body main .categorias-destacado{
+    display: flex;
+    
+    width: 90%;
+    
+    margin: auto;
+    margin-left: 10%;
+    
+    
+}
+
+body main .categorias-destacado .destacado02{
+    
+    width: 45%;
+    
+    
+}
+   
+.categorias-destacado .destacado02 .destacado{
+    
+    border: #2757ff solid 1px;   
+    box-shadow: 1px 2px 10px #2757ff;
+    margin-top: 3%;
+}
+
+    body main .categorias-destacado .categorias02{
+        width: 45%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 6px;
+       margin-top: 1px;
+        
+    }
+    
+    body main .categorias-destacado .categorias02 .categoria-uno{
+        
+       align-self: flex-start;
+       height: 12vw;
+       border: #8d53fd solid 1px;   
+       box-shadow: 1px 2px 10px #8d53fd;
+
+    }
+
+    body main .categorias-destacado .categorias02 .categoria-dos{
+        
+        align-self: center;
+        height: 12vw;
+        box-shadow: 1px 2px 10px #87f234;
+        border: #87f234 solid 1px;
+        width: 100%;
+        
+     }
+     body main .categorias-destacado .categorias02 .categoria-tres{
+        
+        align-self: flex-end;
+        height: 12vw;
+        box-shadow: 1px 2px 10px #faeb52;
+        border: #faeb52 solid 1px;
+        width: 100%;
+    
+
+        /* Hasta aca llega la seccion de destacado y categorias con imagenes*/
+     }
+
+
+     /*Seccion de lo mas destacado*/
+
+     body main .que-estas-buscando{
+         display: flex;
+         justify-content: space-around;
+         flex-wrap: wrap;
+         width: 90%;
+         
+        
+     }
+     body main .que-estas-buscando article{
+         margin-top: 30px;
+         width: 40%;
+         box-shadow: 1px 0px 10px #2757ff;
+         margin-bottom: 5px;
+         transition: all 0.4s;
+    }
+    body main .que-estas-buscando article:hover{
+        box-shadow: 1px 0px 10px #01f174;
+     }
+    
+    body .mobile{
+        display: block;
+    }
+
+
+     /*Banners*/
+
+     main .banners{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+
+    }
+    main .banners img{
+        padding: 5px;
+        width: 50%;
+        height: 15vw;
+
+    }
+
+
+    .suscribirse{
+
+        width: 80%;
+        display: flex;
+        margin-left: 10%;
+        justify-content: space-between;
+        
+        border-radius: 5px;
+       
+    }
+    .suscribirse .enterate-novedades{
+        width: 40%;
+        
+        
+    }
+    .suscribirse .correo-suscripcion{
+        width: 60%;
+        
+        padding: 5px;
+    }
+    .suscribirse .enterate-novedades h3{
+        text-align: center;
+    }
+    .suscribirse .enterate-novedades p{
+        display: block;
+        font-size: 15px;
+        text-align: center;
+        
+    }
+
+    .suscribirse .correo-suscripcion button{
+        transition: all 0.5s;
+        
+    
+    }
+    
+    .suscribirse .correo-suscripcion button:hover{
+        background-color:  rgb(167, 165, 165);
+        /* rgba(140,140,140,1) 100%);*/
+    
+    
+    }
+
+
+    .final{
+        justify-content: center;
+    }
+
+
+
+
+
+
+    /*------FOOTER---------*/
+    footer{
+        margin-top: 100px;
+    }
+    footer .seccion1 img {
+        display: inline-block;
+        margin-top: 21px;
+        width: 17vw;
+        height: 19vh;
+    }
+    footer .seccion1{
+        
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        
+        
+    }
+
+
+    footer .seccion2{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    
+}
+
+@media (min-width:1000px){
+
+    /*--HEADER--------*/
+
+    .barra1.iconos{
+
+        margin-right: -50px
+    }
+    
+    .barra1 .iconos i{
+       margin-right: 15px;
+    }
+
+
+
+
+    /*------MAIN---------*/
+    
+    main .producto-principal{
+        
+        display: flex;
+        width: 75%;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+    main .producto-principal img{
+        width: 70%;
+    }
+    
+    main .caracteristicas{
+        width: 55%;
+        text-align: left;
+        margin-bottom: 100px;
+    }
+    
+    .ofertas-titulo{
+        font-weight: normal;
+        margin-left: 30px;
+        font-size: 24px;
+        text-decoration: underline;
+    
+    
+    }
+    
+    
+    main .ofertas{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+        margin-bottom: 150px;
+        
+    }
+    main .ofertas article img{
+        width: 100%;
+        border-bottom: solid 1px rgb(228, 227, 227);
+        padding: 10px;
+        
+    }
+    
+    main .ofertas article{
+        border: rgb(228, 227, 227) solid 1px;
+        width: 20%;
+        padding: 5px;
+        transition: all 0.4s;
+    }
+    main .ofertas article:hover{
+        box-shadow: 1px 0px 10px #0501f1;
+    }
+    main .ofertas article .nombre-precio-mas{
+        padding: 10px;
+    }
+    main .ofertas article .nombre-precio-mas .nombre{
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+    main .ofertas article .nombre-precio-mas .precio{
+        margin-bottom: 8px;
+        font-size: 19px;
+    }
+    
+    main .ofertas article .nombre-precio-mas a{
+        
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 6px;
+        font-size: 15px;
+        border-radius: 2px;
+        
+    }
+    main .ofertas article .nombre-precio-mas .ver-mas{
+        text-align: center;
+    }
+
+
+
+    body main .que-estas-buscando{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 90%;
+       
+    }
+    body main .que-estas-buscando article{
+        width: 22%;
+        margin-bottom: 5px;
+    }
+
+    h3.titulo-ofertas{
+        display: block;
+    }
+
+
+
+
+
+    /*Newsletter*/
+
+
+    .suscribirse{
+
+        width: 80%;
+        display: flex;
+        
+        justify-content: space-between;
+        margin-left: 136px;
+        border-radius: 5px;
+       
+    }
+
+    .suscribirse .enterate-novedades{
+        width: 40%;
+        
+        
+    }
+    .suscribirse .correo-suscripcion{
+        width: 40%;
+        
+        padding: 5px;
+    }
+    .suscribirse .enterate-novedades h3{
+        text-align: justify;
+    }
+    .suscribirse .enterate-novedades p{
+        display: block;
+        font-size: 15px;
+        
+    }
+
+    .suscribirse .correo-suscripcion button{
+        transition: all 0.5s;
+        
+    
+    }
+    
+    .suscribirse .correo-suscripcion button:hover{
+        background-color:  rgb(167, 165, 165);
+        /* rgba(140,140,140,1) 100%);*/
+    
+    
+    }
+
+
+    .final{
+        justify-content: center;
+    }
+
+
+
+    /*------FOOTER----------*/
+    footer .seccion1 img{
+        display: inline-block;
+        margin-top: 21px;
+        width: 17vw;
+        height: 19vh;
+    }
+    
+    }
+
+  

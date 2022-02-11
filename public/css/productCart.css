@@ -1,0 +1,222 @@
+/*main*/
+
+
+h1{
+    padding: 2%;
+
+}
+.articulo{
+    background-color:rgba(32, 42, 129, 0.253);
+    border: 1px  #8d53fd;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 15px;
+    
+
+}
+/*Imagen, título y precio del producto*/
+.img-titulo-precio{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: space-between;
+}
+
+
+
+.contenedor-img{
+
+    align-self: center;
+    width: 20%;
+    border: 2px solid #2757ff;
+}
+.descripcion{
+    font-size: 10px;
+    align-self: center;
+    width: 15%;
+    margin-left: 15px;
+    margin: 3%;
+    border-right: 1px;
+    
+    /*border-right: 1px solid white;*/
+
+}
+.precio{
+    font-size:14px ;
+    text-align: right;
+    align-self: center;
+    width: 5%;
+    margin-left: 15px;
+    margin-bottom: 1%;
+}
+
+.cantidad-input{
+    width: 10%;
+    margin-top: 65px;
+    
+    text-align: right;
+}
+.cantidad{
+    font-size: 12px;
+    margin-top: 10%;
+    
+}
+
+.cantidad-input input{
+    
+    height: auto;
+    
+}
+
+article .tachito {
+    
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    align-self: stretch;
+    margin-top: 50px;
+    border: transparent;
+    color: royalblue;
+    transition: 1s;
+}
+
+article .tachito:hover{
+
+    color: rgb(167, 2, 2);
+
+}
+
+
+.seguir-comprando{
+    
+    border: 1px  #8d53fd;
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 15px;
+
+    /*margin: 100px;
+    text-align: left;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    padding: 9px;
+    font-size: 15px;
+    background:linear-gradient(to right ,#000000,#0d0c52,#131c3a);
+    margin-top: 8%;*/
+}
+.seguir{
+
+    color:#efeef1;
+    /*margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 1%;*/
+}
+.comprando{
+    margin-right: 1px;
+    width: 95%;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+/*-contenedor Total--*/
+
+.total{
+    
+    width: 80%;
+
+    text-align: left;
+    color: rgb(255, 255, 255);
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 8px;
+    
+
+}
+.titulos{
+
+    background: rgb(128, 128, 139);
+    margin-bottom: 3%;
+    
+}
+.sub-total{
+    font-size: 18px;
+    
+    color: #FFF;
+    
+}
+.envio{
+    margin-bottom:1%;
+    font-size: 18px;
+    
+    color: #FFF;
+}
+.resultados{
+    text-align: center;
+    background-color: rgba(32, 42, 129, 0.253);
+    margin-bottom: 3%;
+    color:rgb(255, 255, 255);
+}
+.button{
+    border: none;
+    width: 100%;
+    margin-left: 1%;
+    color: rgb(207, 206, 206);
+    font-size:18px;
+    background:linear-gradient(to right ,#000000,#0d0c52,#131c3a);
+    padding:8px;
+    margin: auto;
+    border:none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #5c2e6e;
+}
+.button:hover{
+    background:#2757ff;
+}
+
+
+
+
+@media (min-width:700px){
+
+    
+/*------MAIN---------*/
+
+    .articulo{
+        width: 85%;
+    }
+    .descripcion{
+        font-size: 15px;
+        margin: auto;
+
+    }
+    .precio{
+        font-size: 20px;
+        margin-right: 20%;
+        margin-bottom: 5%;
+    }
+    .cantidad-input{
+        width: 10%;
+        margin-top: 10%;
+        font-size: 20px;
+        margin-bottom: auto;
+}
+
+    .cantidad-input input{
+        text-align: center;
+        font-size: 15px;
+        width: 35px;
+    }
+
+/*Seguir comprando*/
+
+/*subtotal de los productos*/
+
+.total{
+    
+    width: 40%;
+    margin-bottom: 1%;
+}
+
+
+
+
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/head')%> 
+
+<body>
+
+    <%- include('../partials/header')%> 
+
+   <main>
+
+    <div class="contenido-perfil">
+
+    <section class="perfil-img">
+        <p>¡Hola! <% if (typeof user !='undefined') { %>
+            <%= user.firstName %> 
+        <% } %><p>
+        <img src="/images/users/<%= user.image %>" alt="">
+        
+        
+    </section>
+
+    <section class="perfil-datos-usuario">
+
+        <form action="/usuario/editar/<%= user.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
+
+
+            <div class="campo-perfil">
+            <label for="first_name">Nombre</label>
+            <input type="text" name="name" value=" <%= user.firstName %> ">
+        </div>
+
+        <div class="campo-perfil">
+        <label for="last_name">Apellido</label>
+        <input type="text" name="last_name" value="<%= user.lastName %>">
+        </div>
+
+        <div class="campo-perfil">
+        <label for="email">Email</label>
+        <input type="email" name="email" value="<%= user.email %>">
+            </div>
+
+        <div class="campo-perfil">
+        <input type="date" name="date" value="<%= user.date %>">
+            </div>
+
+        <div class="campo-perfil">
+        <label for="password">Cambiar contraseña</label>
+        <input type="password" name="password" value="">
+            </div>
+
+            <div class="avatar">
+            <label for="image">Editar Avatar</label>
+            <input type="file" name="image" class="imagen-perfil"></div>
+
+
+            <div class="btn-form">
+        <button type="submit">Guardar cambios</button></div>
+
+        
+
+        </form>
+
+        <!--<div class="btn-form-eliminar">
+            <form action="">
+                <button type="submit">Cerrar sesion</button>
+            </form></div>-->
+
+
+    </section>
+
+</div>
+
+   </main>
+
+   <%- include('../partials/footer')%>
+
+</body>
+</html>

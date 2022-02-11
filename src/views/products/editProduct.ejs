@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head')%> 
+<body>
+    
+
+    <%- include('../partials/header')%> 
+
+
+<main>
+
+
+    
+    <br>
+    <div class="contenedor-formularioCreate">
+        <form action="/products/<%=producto.id%>?_method=PUT" method="POST" enctype="multipart/form-data" >
+    
+            <fieldset>
+                <legend>Editar producto</legend>
+               <div class="contenido-form">
+
+                <div class="art-product">
+                        <label for="">Nombre del producto</label>
+                        <input type="text" name="name" value="<%=producto.name%>" required>
+                </div>
+
+
+                <div class="art-product">
+
+                    <label for="">Categoría</label>
+                    <select name="category">
+                        <option value="Pc/Notebook">Pc/Notebook</option>
+                        <option value="Audio">Audio</option>
+                        <option value="Video">Video</option>
+                        <option value="Sillas gamer">Sillas gamer</option>
+                        <option value="Periféricos/componentes">Periféricos/componentes</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+               </div>
+            
+  
+                <div class="art-product">
+                    <label for="">Precio </label>
+                    <input type="text" name="price" value="<%=producto.price%>" required>
+                </div>
+
+                <div class="art-product">
+                    <label for="">Sección</label>
+                    <select name="section">
+                        <option value="todos">Todos</option>
+                        <option value="ofertas">Ofertas</option>
+                        <option value="destacado">Destacado</option>
+                    </select>
+                </div>
+
+                <div class="textarea">
+                        <label for="">Descripción</label>
+                        <textarea name="description" rows="8" cols="25" ><%=producto.description%></textarea>
+                </div>
+
+                <div class="art-product">
+                    <label>Imagen</label>
+                    <input type="file"  class="img" name="image" placeholder="Imagen del artículo" >
+                </div>
+               
+                        <div class="btn-form">
+                            
+                            <button type="submit">Guardar cambios</button>
+                    </div>
+                    
+                </div>
+            
+                </form>
+                <!--Seguir editando-->
+                <div class="btn-form-eliminar">
+                    <form action="/products/delete/<%=producto.id%>?_method=delete" method="POST">   
+                        <button type="submit">Eliminar producto</button>
+                    </form> 
+    
+            </div>
+            </fieldset>
+                <div class="editar">
+                    <p><a href='/products/create' class="seguir"><i class="fas fa-chevron-circle-left"></i>Crear nuevo producto</a></p>
+                </div>
+    </div>
+</main>
+
+
+
+
+    <%- include('../partials/footer')%>
+
+</body>
+</html>
