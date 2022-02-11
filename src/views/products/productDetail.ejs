@@ -11,13 +11,13 @@
 
         <section class="producto-principal">
             
-            <img src="/images/<%=producto.image%>" alt="foto del producto">
+            <img src="/images/default-image.png" alt="foto del producto">
 
             <article class="datos-producto">
                 <h2><%= producto.name%></h2>
 
                 <p class="breve-descripcion"><%= producto.description%></p>
-                <p class="precio-del-producto"><%= producto.price%></p>
+                <p class="precio-del-producto">$<%= producto.price%></p>
 
                 <div class="iconos-texto">
 
@@ -50,9 +50,14 @@
                     <li class="color1">Nombre : <%= producto.name%></li>
                     
                     
-                  <li class="color2">Precio : <%= producto.price%></li>
-                    <li class="color1">Categoria :<%= producto.category%> </li>
-                    <li class="color2">Categoria :<%= producto.description%> </li>
+                  <li class="color2">Precio : $<%= producto.price%></li>
+                  <% if (producto.section) { %>
+                    <li class="color1">Categoria :<%= producto.section%> </li>
+                    <li class="color2">Descripcion :<%= producto.extended_description%> </li>
+                  <% }else{ %>
+                    <li class="color1">Descripcion :<%= producto.extended_description%> </li>
+                   
+                 <% }%> 
                    
                 </ul>
 
@@ -62,7 +67,7 @@
         </section>
 
 
-        <%- include('../partials/ofertas')%> 
+       
 
 
         <%-   include('../partials/newsletter')%> 

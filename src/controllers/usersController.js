@@ -2,6 +2,9 @@ const { validationResult }=require('express-validator')
 const jsonDb = require('../model/jsonDatabase');
 const usersModel = jsonDb('users');
 const bcryptjs = require('bcryptjs');
+const db = require('../database/models');
+const Users = db.User;
+const { Op } = require("sequelize");
 
 const usersController = {
     login:(req,res)=>{
@@ -88,6 +91,14 @@ const usersController = {
       
     },
     profile:function (req,res) {
+
+        /*User.findAll({
+            where:{
+                email:req.session.user.email
+            }
+        })
+        .then()*/
+
         res.render('users/userProfile',{user:req.session.user})
     },
     //Borra lo que esté en session

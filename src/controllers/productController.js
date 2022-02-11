@@ -83,17 +83,28 @@ const productController = {
     detail: function (req,res) {
 
         if(req.session.user){
-            let id = req.params.id
 
-            let producto = productModel.find(id)
-            let products = productModel.all()
-            res.render('products/productDetail',{user:req.session.user,producto,products})
+            /*Products.findAll({
+                where:{
+                    section='Ofertas'
+                }
+            })*/
+            
+            Products.findByPk(req.params.id)
+                .then(producto =>{
+                    res.render('products/productDetail',{user:req.session.user,producto,products})
+                })
+
+            
         }
-        let id = req.params.id
 
-        let producto = productModel.find(id)
-        let products = productModel.all()
-        res.render('products/productDetail',{producto,products})
+
+        //PONER VARIABLE CON OFERTAS
+
+        Products.findByPk(req.params.id)
+                .then(producto =>{
+                    res.render('products/productDetail',{producto})
+                })
     },
     cart: (req,res)=>{
 
