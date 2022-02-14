@@ -1,5 +1,7 @@
 const express= require('express');
 const router= express.Router();
+const path = require('path');
+
 
 
 const upload= require('../middleware/multerAvatar');
@@ -20,13 +22,13 @@ let auth = require('../middleware/auth')
 router.get('/login',ifUserLogged, usersController.login);
 
 //Procesamiento de formulario de loggeo
-router.post('/login', validation, usersController.loginProcess);
+router.post('/login', usersController.loginProcess);
 //Logout
 router.get('/logout', usersController.logout)
 //Register
 router.get('/registro',ifUserLogged, usersController.register);
 
-router.post('/registro',validation,upload.single('avatar'),usersController.create);
+router.post('/registro',upload.single('avatar'),usersController.create);
 
 //Perfil de usuario
 router.get('/perfil',auth,usersController.profile)

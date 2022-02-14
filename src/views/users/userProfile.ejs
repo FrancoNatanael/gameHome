@@ -15,7 +15,7 @@
         <p>¡Hola! <% if (typeof user !='undefined') { %>
             <%= user.firstName %> 
         <% } %><p>
-        <img src="/images/users/<%= user.image %>" alt="">
+        <img src="/images/users/<%= user.avatar %>" alt="imagen perfil de usuario">
         
         
     </section>
@@ -51,7 +51,7 @@
 
             <div class="avatar">
             <label for="image">Editar Avatar</label>
-            <input type="file" name="image" class="imagen-perfil"></div>
+            <input type="file" name="avatar" class="imagen-perfil"></div>
 
 
             <div class="btn-form">

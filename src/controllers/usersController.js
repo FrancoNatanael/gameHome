@@ -1,4 +1,4 @@
-const { validationResult }=require('express-validator')
+const { validationResult, body }=require('express-validator')
 const jsonDb = require('../model/jsonDatabase');
 const usersModel = jsonDb('users');
 const bcryptjs = require('bcryptjs');
@@ -7,12 +7,14 @@ const Users = db.User;
 const { Op } = require("sequelize");
 
 const usersController = {
+
     login:(req,res)=>{
         if(req.session.user){
             res.render('users/login',{user:req.session.user})
         }
         res.render('users/login')
     },
+
     register: (req,res)=>{
 
         if(req.session.user){
@@ -21,58 +23,63 @@ const usersController = {
 
         res.render('users/register')
     },
+
     create: (req,res)=>{
+
         const errors = validationResult(req)
 
         if(errors.isEmpty()){
-        let row = req.body
         
-
-        row.password = bcryptjs.hashSync(req.body.password,10)
-
+       let user = req.body
+       let password = bcryptjs.hashSync(req.body.password,10)
+        
+        user.password=password
         console.log(req.file);
 
+        //Para aplicar imagen de usuario por Default
         if(req.file){
-            row.image = req.file.filename
+            user.avatar = req.file.filename
         }else{
-            row.image = 'default-image.png'
+            user.avatar = 'default-image.png'
         }
+        //Determinar el rol
+        if(req.body.email.includes('@gamehome.com')){
+            user.rolId= 1
+        }else{
+            user.rolId =2
+        }
+        //Creación a través de la variable user con el create db
+        Users.create(user).then(()=>{
+            return res.redirect('/login')
+        }).catch(error => res.send(error))
+            res.redirect('login')
 
-        console.log(req.body);
-
-        usersModel.create(row) 
-
-        res.redirect('login')
-    }else{
+        }else{
             res.render('users/register',{errors:errors.mapped(),old:req.body});
         }
+        
     },
+
     loginProcess:(req,res)=>{
         const errors = validationResult(req)
-
         
         if(errors.isEmpty()){
-            let userAll = usersModel.readFile()
 
-            let userEncontrado;
+            let userDB = Users.findAll({include:['rol']},{
+                where: {
+                 email: req.body.email
+            }})
+            .then(user => {
+                return user})
 
-            for (let i = 0; i < userAll.length; i++) {
-               if(userAll[i].email == req.body.email){
-               userEncontrado =  userAll[i]
-               }
-                
-            }
+            if(userDB){
+          //&& bcryptjs.compareSync(req.body.password,user.password)==true
 
-            console.log(userEncontrado);
+                  req.session.user=userDB
 
-            if(userEncontrado && bcryptjs.compareSync(req.body.password,userEncontrado.password)==true){
+                console.log(req.session.user.email)
 
-                   
-
-                req.session.user=userEncontrado
-
-                console.log(req.session.email)
-
+                //Para salvar la cookie
                     if(req.body.recordar){
                         res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*2})
                     }
