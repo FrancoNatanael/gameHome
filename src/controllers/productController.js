@@ -184,11 +184,15 @@ const productController = {
     // Delete - Delete one product from DB
 	destroy : (req, res) => {
 		// Do the magic
-		productModel.delete(req.params.id)
+	let productId = req.params.id;
 
-		res.redirect('/products')
-	}
+    Products
+    .destroy({where: {id:productId}, force : true})
+    .then(()=>{
+        res.redirect('/products')
+    })
 
+}
 }
 
 
