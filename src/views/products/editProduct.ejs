@@ -62,19 +62,19 @@
 
                 <div class="art-product">
                     <label for="">Descripción extendida</label>
-                        <textarea name="extended_description" rows="8" cols="25" placeholder="Descripción extendida del producto:" ></textarea>
+                        <textarea name="extended_description" rows="8" cols="25" placeholder="Descripción extendida del producto:" ><%=producto.extended_description%></textarea>
                 </div>
                 <div class="art-product">
                     <label for="">Stock</label>
-                    <input type="text" name="stock">
+                    <input type="text" name="stock" value="<%=producto.stock%>">
                 </div>
                 <div class="art-product">
                     <label for="">Stock minimo</label>
-                    <input type="text" name="stock_min">
+                    <input type="text" name="stock_min" value="<%=producto.stock_min%>">
                 </div>
                 <div class="art-product">
                     <label for="">Stock maximo</label>
-                    <input type="text" name="stock_max">
+                    <input type="text" name="stock_max" value="<%=producto.stock_max%>">
                 </div>
 
                 <div class="art-product">

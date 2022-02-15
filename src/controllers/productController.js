@@ -201,7 +201,7 @@ const productController = {
 			
 
 		
-		Product.update(row,{
+		Products.update(row,{
             where:{
                 id:idReq
             }
