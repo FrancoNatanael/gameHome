@@ -1,8 +1,14 @@
 const jsonDb = require('../model/jsonDatabase')
 const productModel = jsonDb('products')
 const db = require('../database/models')
-const Products = db.Product
+const { Op } = require("sequelize");
 
+/*Modelos base de datos*/
+
+const Products = db.Product
+const Colors = db.Color
+const Brands = db.Brand
+const Categories = db.Category
 
 
 const productController = {
@@ -59,26 +65,64 @@ const productController = {
     add: (req,res)=>{
 
         if(req.session.user){
-            res.render('products/productAdd',{user:req.session.user})
+
+            let brands = Brands.findAll();
+            let colors= Colors.findAll();
+            let categories = Categories.findAll();
+
+            Promise
+            .all([brands,colors,categories])
+            .then(
+                ([brands,colors,categories]) => {
+                    res.render('products/productAdd',{user:req.session.user , brands,colors,categories})
+                }
+            )
+
+
+           
         }
-        res.render('products/productAdd');
+        let brands = Brands.findAll();
+        let colors= Colors.findAll();
+        let categories = Categories.findAll();
+
+        Promise
+        .all([brands,colors,categories])
+        .then(
+            ([brands,colors,categories]) => {
+                res.render('products/productAdd',{ brands,colors,categories})
+            }
+        );
 
     },
     store: (req, res) => {
-        let row = req.body
+        let product = {
+            name:req.body.name,
+            price:req.body.price,
+            stock_min:req.body.stock_min,
+            stock_max:req.body.stock_max,
+            stock:req.body.stock,
+            categoryId:req.body.categoryId,
+            colorId:req.body.colorId,
+            brandId:req.body.brandId,
+            description:req.body.description,
+            extended_description:req.body.extended_description
+        
+        }
         
         if(req.file){
-            row.image = req.file.filename
+            product.image = req.file.filename
         }else{
-            row.image = 'default-image.png'
+            product.image = 'default-image.png'
         }
 
-        console.log(req.body);
+        Products.create(product)
+        .then(() => {
+            return  res.redirect('products')
+        })
 
-        productModel.create(row) 
-
-        res.redirect('products')
+        
     },
+    
 
     detail: function (req,res) {
 
