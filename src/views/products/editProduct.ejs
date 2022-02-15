@@ -28,15 +28,17 @@
                 <div class="art-product">
 
                     <label for="">Categoría</label>
-                    <select name="category">
-                        <option value="Pc/Notebook">Pc/Notebook</option>
-                        <option value="Audio">Audio</option>
-                        <option value="Video">Video</option>
-                        <option value="Sillas gamer">Sillas gamer</option>
-                        <option value="Periféricos/componentes">Periféricos/componentes</option>
-                        <option value="Otros">Otros</option>
+                    <select name="categoryId">
+                        <% categories.forEach(category => { %>
+                            <% if (category.id==producto.categoryId) { %>
+                                <option selected="selected"value="<%= category.id%> "><%= category.name%></option>
+                            <% }else{ %> 
+                                <option value="<%= category.id%> "><%= category.name%></option>
+                                <% } %> 
+                            
+                        <% }) %>
                     </select>
-               </div>
+                </div>
             
   
                 <div class="art-product">
@@ -57,6 +59,53 @@
                         <label for="">Descripción</label>
                         <textarea name="description" rows="8" cols="25" ><%=producto.description%></textarea>
                 </div>
+
+                <div class="art-product">
+                    <label for="">Descripción extendida</label>
+                        <textarea name="extended_description" rows="8" cols="25" placeholder="Descripción extendida del producto:" ></textarea>
+                </div>
+                <div class="art-product">
+                    <label for="">Stock</label>
+                    <input type="text" name="stock">
+                </div>
+                <div class="art-product">
+                    <label for="">Stock minimo</label>
+                    <input type="text" name="stock_min">
+                </div>
+                <div class="art-product">
+                    <label for="">Stock maximo</label>
+                    <input type="text" name="stock_max">
+                </div>
+
+                <div class="art-product">
+                    <label for="">Color</label>
+                    <select name="colorId">
+                        <% colors.forEach(color => { %>
+                            <% if (color.id == producto.colorId) { %>
+                                <option selected="selected" value="<%= color.id %> "><%= color.name  %> </option>
+                            <% } else { %>
+                            
+                                <option value="<%= color.id %> "><%= color.name  %> </option>
+                                <% } %> 
+                        <% }) %>
+                    </select>
+                </div>
+
+                <div class="art-product">
+                    <label for="">Marca</label>
+                    <select name="brandId">
+                        <% brands.forEach(brand => { %>
+                            <% if (brand.id == producto.brandId) { %>
+                                <option selected="selected" value="<%= brand.id %> "><%= brand.name  %> </option>
+                            <% } else { %>
+                            
+                                <option value="<%= brand.id %> "><%= brand.name  %> </option>
+                                <% } %> 
+                        <% }) %>
+                    </select>
+                </div>
+
+                
 
                 <div class="art-product">
                     <label>Imagen</label>

@@ -2,6 +2,7 @@ const jsonDb = require('../model/jsonDatabase')
 const productModel = jsonDb('products')
 const db = require('../database/models')
 const { Op } = require("sequelize");
+const { promiseImpl } = require('ejs');
 
 /*Modelos base de datos*/
 
@@ -51,16 +52,37 @@ const productController = {
 },
     edit: (req,res)=>{
 
+    
         if(req.session.user){
-            let id=req.params.id;
-            let producto= productModel.find(id)
-           
-            res.render('products/editProduct',{user:req.session.user,producto})
-        }
-       let id=req.params.id;
-       let producto= productModel.find(id)
 
-        res.render('products/editProduct',{producto});
+            let id=req.params.id;
+            let producto=Products.findByPk(id);
+            let colors = Colors.findAll();
+            let categories = Categories.findAll();
+            let brands = Brands.findAll();
+
+            Promise
+           .all([producto,colors,categories,brands])
+           .then(([producto,colors,categories,brands])=>
+            {
+                res.render('products/editProduct',{user:req.session.user,producto,colors,categories,brands})
+            })
+
+
+           
+        }
+        let id=req.params.id;
+        let producto=Products.findByPk(id);
+        let colors = Colors.findAll();
+        let categories = Categories.findAll();
+        let brands = Brands.findAll();
+
+        Promise
+       .all([producto,colors,categories,brands])
+       .then(([producto,colors,categories,brands])=>
+        {
+            res.render('products/editProduct',{user:req.session.user,producto,colors,categories,brands})
+        })
     },
     add: (req,res)=>{
 
@@ -170,15 +192,26 @@ const productController = {
 				row.image = req.file.filename
 			}
 			else if(req.file==undefined){
-				let objeto = productModel.find(idReq)
-				row.image = objeto.image
+				let  product =Products.findByPk(idReq).then(result=>{
+                    return result
+                })
+                
+                    row.image = product.image
 			}
 			
 
 		
-		productModel.update(row) 
+		Product.update(row,{
+            where:{
+                id:idReq
+            }
+        })
+        .then(()=>{
 
-		res.redirect('/products')
+            res.redirect('/products')
+        })
+
+		
 },
 		
     // Delete - Delete one product from DB
