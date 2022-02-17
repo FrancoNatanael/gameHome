@@ -1,6 +1,6 @@
 const { validationResult, body }=require('express-validator')
-const jsonDb = require('../model/jsonDatabase');
-const usersModel = jsonDb('users');
+
+
 const bcryptjs = require('bcryptjs');
 const db = require('../database/models');
 const Users = db.User;

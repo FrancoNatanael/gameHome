@@ -1,5 +1,3 @@
-const jsonDb = require('../model/jsonDatabase')
-const productModel = jsonDb('products')
 const db = require('../database/models')
 const { Op } = require("sequelize");
 const { promiseImpl } = require('ejs');
