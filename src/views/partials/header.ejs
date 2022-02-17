@@ -49,10 +49,12 @@
           <!--<div class="input"><p></p></div>-->  
           
 
-            <input type="text" placeholder="buscar" required class="input">
+          <form action="/products/search" method="POST">
+            <input type="text" placeholder="buscar" class="input" name="search">
 
 
-            <div class="submit"><i class="fas fa-search"></i>
+            <div class="submit"><button type="submit"><i class="fas fa-search"></i></button></i>
+          </form>
             </div>
         </div>
 

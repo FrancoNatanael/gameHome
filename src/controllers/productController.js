@@ -16,11 +16,52 @@ const productController = {
     index: (req,res)=>{
 
         if(req.session.user){
-            let products = productModel.all()
-            res.render('products/index',{user:req.session.user,products})
+            let products = Products.findAll({include:['brand','color','category']},{
+                where:{
+                    section:'Destacado'
+                },
+                limit:8
+            })
+            let sale = Products.findAll({include:['brand','color','category'],
+                where:{
+                    section:'Ofertas'
+                },
+                limit:4
+            })
+
+
+            Promise
+            .all([products,sale])
+            .then(([products,sale]) => {
+                return  res.render('products/index',{user:req.session.user,sale,products})
+            })
         }
-            let products = productModel.all()
-        res.render('products/index',{products})
+        let products = Products.findAll(
+            {
+                include:['brand','color','category'],
+            
+            where:{
+                section:{
+                    [Op.eq]: 'Destacado'
+                }
+            },
+            limit:8
+        })
+        let sale = Products.findAll({include:['brand','color','category'],
+            where:{
+                section:{
+                    [Op.eq]: 'Ofertas'
+                }
+            },
+            limit:4
+        })
+
+
+        Promise
+        .all([products,sale])
+        .then(([products,sale]) => {
+            return  res.render('products/index',{sale,products})
+        })
     },
     all: (req,res)=>{
     
@@ -150,27 +191,44 @@ const productController = {
 
         if(req.session.user){
 
-            /*Products.findAll({
-                where:{
-                    section='Ofertas'
+            let sale = Products.findAll({include:['brand','color','category'],
+            where:{
+                section:{
+                    [Op.eq]: 'Ofertas'
                 }
-            })*/
+            },
+            limit:4
+        })
             
-            Products.findByPk(req.params.id)
-                .then(producto =>{
-                    res.render('products/productDetail',{user:req.session.user,producto,products})
+           let producto =  Products.findByPk(req.params.id)
+
+
+           Promise
+           .all([sale,producto])
+            .then(([sale,producto]) =>{
+                    res.render('products/productDetail',{user:req.session.user,sale,producto})
                 })
 
             
         }
 
+        let sale = Products.findAll({include:['brand','color','category'],
+        where:{
+            section:{
+                [Op.eq]: 'Ofertas'
+            }
+        },
+        limit:4
+    })
+        
+       let producto =  Products.findByPk(req.params.id)
 
-        //PONER VARIABLE CON OFERTAS
 
-        Products.findByPk(req.params.id)
-                .then(producto =>{
-                    res.render('products/productDetail',{producto})
-                })
+       Promise
+       .all([sale,producto])
+        .then(([sale,producto]) =>{
+                res.render('products/productDetail',{sale,producto})
+            })
     },
     cart: (req,res)=>{
 
@@ -212,6 +270,18 @@ const productController = {
         })
 
 		
+},
+search:function (req,res) {
+    Products.findAll({
+        where:
+        {
+            name :{[Op.like]:'%'+ req.body.search +'%'}
+        }
+    })  
+    .then(products =>{
+        
+        res.render('products/products',{user:req.session.user,products})
+    })
 },
 		
     // Delete - Delete one product from DB

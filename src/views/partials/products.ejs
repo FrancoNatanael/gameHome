@@ -2,7 +2,10 @@
 <section class="que-estas-buscando">
 
     <% for(let i=0;i<products.length;i++){ %>
- 
+        <% if (products.length<1) { %>
+            <br><br><br><br><br>
+            <h2>¡Ups! No se encontraron productos!</h2>
+        <% } else {%>
 
      <article>
         
@@ -16,6 +19,7 @@
     </div>
 
     </article>
+    <% } %> 
     <% } %>
     
 

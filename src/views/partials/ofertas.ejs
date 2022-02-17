@@ -1,10 +1,9 @@
 <h3 class="titulo-ofertas">¡Ofertas!</h3>
 <section class="ofertas">
 
-    <% for(let i=0;i<products.length;i++){ %>
+    <% for(let i=0;i<sale.length;i++){ %>
      
-        <% if(products[i].section==="ofertas") {%> 
-             
+        
            
  
      
@@ -12,17 +11,17 @@
 
      <article>
         
-        <img src="/images/<%=products[i].image%>"alt="">
+        <img src="/images/<%=sale[i].image%>"alt="">
 
         <div class="nombre-precio-mas">
 
-        <p class="nombre"><%= products[i].name%></p>
-        <p class="precio"><%= products[i].price%></p>
-        <p class="ver-mas"><a href="/products/<%=products[i].id%>">Ver mas</a></p>
+        <p class="nombre"><%= sale[i].name%></p>
+        <p class="precio"><%= sale[i].price%></p>
+        <p class="ver-mas"><a href="/products/<%=sale[i].id%>">Ver mas</a></p>
     </div>
 
     </article>
-    <% } %>
+   
      <% } %>
 
 </section>
