@@ -18,7 +18,7 @@ function cookie(req,res,next)
                 
             } */
 
-             userFromCookie =  Users.findOne({where:{email:emailInCookie}}).then((result)=>{return result})
+            // userFromCookie =  Users.findOne({where:{email:emailInCookie}}).then((result)=>{return result})
 
     if(userFromCookie)
     {

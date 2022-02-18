@@ -65,12 +65,12 @@ const usersController = {
         
         if(errors.isEmpty()){
 
-            let userDB = Users.findAll({include:['rol']},{
+           /* let userDB = Users.findAll({include:['rol']},{
                 where: {
                  email: req.body.email
             }})
             .then(user => {
-                return user})
+                return user})*/
 
             if(userDB){
           //&& bcryptjs.compareSync(req.body.password,user.password)==true
