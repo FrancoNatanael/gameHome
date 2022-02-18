@@ -24,17 +24,17 @@ router.get('/login',ifUserLogged, usersController.login);
 //Procesamiento de formulario de loggeo
 router.post('/login', usersController.loginProcess);
 //Logout
-router.get('/logout', usersController.logout)
+router.get('/logout', usersController.logout);
 //Register
 router.get('/registro',ifUserLogged, usersController.register);
 
 router.post('/registro',upload.single('avatar'),usersController.create);
 
 //Perfil de usuario
-router.get('/perfil',auth,usersController.profile)
+router.get('/perfil',auth,usersController.profile);
 
 //Edición de perfil
-//router.put('/editar/:id',upload.single('image'),usersController.edit)
+router.put('/editar/:id',upload.single('avatar'),usersController.editProfile);
 
 
 module.exports= router;

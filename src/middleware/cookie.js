@@ -7,18 +7,12 @@ function cookie(req,res,next)
     res.locals.isLogged = false;
 
     let emailInCookie = req.cookies.userEmail;
-    //let userAll = Users.findAll({include:['rol']})
 
             let userFromCookie;
 
-            /*for (let i = 0; i < userAll.length; i++) {
-               if(userAll[i].email == emailInCookie){
-               userFromCookie =  userAll[i]
-               }
-                
-            } */
-
-            // userFromCookie =  Users.findOne({where:{email:emailInCookie}}).then((result)=>{return result})
+            if(emailInCookie){
+                userFromCookie =  Users.findOne({where:{email:emailInCookie}}).then((result)=>{return result})
+            }
 
     if(userFromCookie)
     {

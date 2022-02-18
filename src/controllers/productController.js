@@ -237,7 +237,7 @@ const productController = {
     },
     // Update - Method to update
 	update: (req, res) => {
-		// Do the magic
+		
 
 		let idReq = req.params.id
 

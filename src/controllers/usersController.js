@@ -60,29 +60,27 @@ const usersController = {
         
     },
 
-    loginProcess:(req,res)=>{
+    loginProcess:async (req,res)=>{
+         
+        
         const errors = validationResult(req)
         
         if(errors.isEmpty()){
 
-           /* let userDB = Users.findAll({include:['rol']},{
-                where: {
-                 email: req.body.email
+            let user = await Users.findOne({
+                where:{
+                email:req.body.email
             }})
-            .then(user => {
-                return user})*/
 
-            if(userDB){
-          //&& bcryptjs.compareSync(req.body.password,user.password)==true
+            if(user && bcryptjs.compareSync(req.body.password,user.password)==true){
 
-                  req.session.user=userDB
+                  req.session.user=user
 
                 console.log(req.session.user.email)
 
                 //Para salvar la cookie
                     if(req.body.recordar){
-                        res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*2})
-                    }
+                        res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*2})}
                     
                     return res.redirect('/')
                 
@@ -90,23 +88,42 @@ const usersController = {
             else{
                 res.render('users/login');
             }
-
+        } else{
+           res.render('users/login',{errors:errors.mapped(),old:req.body});
         }
-        else{
-            res.render('users/login',{errors:errors.mapped(),old:req.body});
-        }
-      
+    
+    
+ 
     },
     profile:function (req,res) {
 
-        /*User.findAll({
-            where:{
-                email:req.session.user.email
-            }
-        })
-        .then()*/
-
         res.render('users/userProfile',{user:req.session.user})
+    },
+
+    editProfile: (req,res)=>{
+
+        let idReq = req.params.id
+		let  user= req.body
+
+			if(req.file!=undefined){
+				user.avatar = req.file.filename
+			}
+			else if(req.file==undefined){
+				let  userImg =Users.findByPk(idReq).then(result=>{
+                    return result
+                })
+                
+                    user.avatar = userImg.avatar
+			}
+            Users.update(user, {
+                where: {
+                id : idReq
+            }}).then(()=>{
+                req.session.user= user
+                res.render('users/userProfile',{user:req.session.user})})
+                .catch(error => res.send(error));
+            
+    
     },
     //Borra lo que esté en session
 	logout:(req,res) =>{
