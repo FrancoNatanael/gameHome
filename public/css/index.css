@@ -19,23 +19,24 @@ body{
 .barra1{
     width: 100%;
     height: 110px;
-    /*border: solid 1px red;*/
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgb(197, 191, 191);
-    
+    margin-top: 1%;
+    align-items: flex-start;
     
 }
 
 .barra1 img{
-   
-    width: 20vw;
+    width: 65%;
     left: 79%;
+    
 }
 .contenedor-logo{
     width: 200px;
     height: 109px;
     bottom: 1px;
+    top: 3px;
 
 }
 
@@ -49,7 +50,12 @@ body{
     right: 10%;
     margin-top:2px;
     padding: 10px;
-    color:#FFF;
+    color:#aeb2f3;
+    top:5%;
+    box-shadow: 3px rgb(129, 108, 108);
+}
+.carrito i:hover{
+    color: #FFF;
 }
 
 /*Menù lateral*/
@@ -67,18 +73,13 @@ body{
     font-size: 23px;
     right: 2%;
     margin-top: 6px;
+    top:5%;
+    color:#aeb2f3;
+}
+.btn-menu:hover{
+    color:#FFF;
 }
 
-/*.container-menu{
-    position: absolute;
-    /*background: rgba(18, 1, 49, 0.568);
-    width: 100%;
-    height: auto;
-    top: 0%;
-    
-    opacity: 0;
-    visibility: hidden;
-}/*/
 
 #btn-menu:checked ~ .cont-menu{
     opacity: 1;
@@ -142,39 +143,81 @@ body{
     font-size: 18px;
     
 }
-
 /*Fin de Burger-btn*/
 
+.barra-busqueda{
 
-.barra1 .barra-busqueda{
-    display: flex;
-    align-items: center;
-    margin-bottom:69px;
-    margin-right:27%;
-    margin-top: 3px;
+    position: absolute;
+    left: 40%;
+    top: 5%;
+    padding: 5px;
+    width: 40px;
 }
-.submit i{
-    right: 25px;
-}
-.barra1 .barra-busqueda .input{
-    height: 22px;
+
+.barra-busqueda input{
+    height: 30px;
+    width: 20px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding: 0px 15px;
+    border-radius: 30px;
     font-size: 10px;
-    border: solid 2px rgb(197, 191, 191);
-    padding: 6px;
-    border-radius: 9px;
+    border: 1px solid #1f1f1f;
     text-align: center;
-    margin-right:7px ;
+    transition: all 1s ease;
+
+}
+::placeholder{
+    color: #0e10a1;
+    font-size: 12px;
     
 }
-
-
+.lupita{
+    position: absolute;
+    right: 0;
+    top:0px;
+    width: 18px;
+    height: 38px;
+    padding: 14px 19px;
+    background: #eaee00;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: 1.5s;
+}
+.lupita button{
+    background-color: transparent;
+    text-decoration: none;
+    border: 0px;
+    width: 0;
+}
+.lupita button i{
+    position: absolute;
+    font-size: 12px;
+    top: 0;
+    left: 0;
+    color: #000000;
+    background-color: transparent;
+    line-height: 42px;
+    right: 0px;
+    margin-right: 5px;
+}
+.barra-busqueda:hover .input{
+    width: 130px;
+    border: 1px solid #858080;
+    
+}
+.barra-busqueda:hover button i{
+    transform: rotate(-260deg);
+    color: #453061;
+    
+}
 .barra1 .iconos{
     display: none;
 }
-
 .iconos{
     color: white;
-    
+    top:5%;
 }
 /*Sub menu2*/
 
@@ -191,9 +234,6 @@ body{
 
 
 /*------MAIN------*/
-
-
-
 main a{
     width: auto;
 }
@@ -217,13 +257,10 @@ body main .categorias-destacado .destacado02{
 }
 body main .categorias-destacado .destacado02 img{
     width:90%;
-    border: #2757ff solid 1px; 
-    
+    border: #2757ff solid 1px;  
     margin-left: 5%;
 }
-body main .categorias-destacado .categorias02{
-       
-    
+body main .categorias-destacado .categorias02{    
     width: 100%;
     margin-left: 1%;
 }
@@ -232,8 +269,6 @@ body main .categorias-destacado .categorias02 img{
     width: 100%;
     height: 85px;
     border: #2757ff solid 1px;  
-    
-    
 }
 body .mobile{
     display: none;
@@ -432,14 +467,6 @@ main .ofertas{
 
 }
 
-
-
-
-
-
-
-
-
 /*------FOOTER---------*/
 footer{
     margin-top: 20px;
@@ -455,19 +482,14 @@ footer .seccion1{
     border-top: solid 1px rgb(228, 227, 227);
 }
 footer  img{
- 
     display: none;
-   
 }
 
 footer .seccion1 .productos,.contacto,.redes{
     margin-top: 30px;
-   
-    
 }
 footer .seccion1 .productos,.contacto{
    margin-left: 12px;
-
 }
 footer .seccion1 h5{
     font-weight: normal;
@@ -492,59 +514,55 @@ footer .seccion2{
     justify-content: space-between;
     background-color: black;
     color: rgb(228, 227, 227);
-
 }
 
 
 @media (min-width:700px){
 
     /*TABLET*/
-
      /*------HEADER---------*/
-
-
      .barra1 img{
         display: block;
         width: 85%;
-
      }
     .burger-menu{
         display: none;
     }
     
-.barra1 .barra-busqueda{
+    .barra-busqueda{
+        left: 28%;
+    
+        padding: 5px;
+   
+         top: 35px;
+    }
 
-    margin-left: 0;
-    margin-top: 56px;
-    margin: auto;
-}
-
-    .barra1 .barra-busqueda .input{
-        
-        margin-right: 5px;
-        width: 25vw;
-        height: 30px;
-        font-size: 12px;
-        border: solid 2px#87f234;
-        padding: 6px;
-        border-radius: 15px;
-        text-align: center;
+    .barra-busqueda:hover .input{
+        width: 380px;
+        color: #02222c;
+        transition: all 1.5s;
+    }
+    .barra1{
+        justify-content:space-between;
+    }
+    .barra1 .contenedor-logo{
+       
     }
     .barra1 .iconos{
         display: block;
-        margin-top: 15px;
-        width: 16%;
-        
-        
+        margin-top: 6px;
+        width: 16%;  
+        margin-left: 59%;
     }
 
     .barra1 .iconos i{
         font-size: 25px;
         margin-right: 5%;
         margin-top: 28px;
-        color:#87f234;
-        
-
+        color:#1cee00;
+    }
+    .iconos i:hover{
+        color: #dbeb00;
     }
     .barra1 .carrito i{
         display: none;
@@ -618,142 +636,118 @@ footer .seccion2{
         transition: all 1s;
     }
    .barra2 i{
-
         font-size: 15px;
-        color:#87f234;
+        color: #1cee00;
     }
-    
 
-    
     .barra2 nav ul{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        
         padding: 10px;
-        background:#000;
+        
     }
     .barra2 nav ul li {
-        
         list-style: none;
     }
     .barra2 nav ul li a{
         text-decoration:none;
         color: #FFF;
         transition: all 0.5s;
+        background-color: transparent;
+        border: 0;
+
     }
-
-
+    .barra2 li:hover{
+        color: rgba(255, 255, 255, 1);
+        box-shadow: 0 4px 16px rgb(242, 246, 1);
+        transition: all 0.2s ease;
+    }
     .iconos-barra2 i{
         border: 1px solid wheat;
         display: block;
 
     }
-
-    
+ 
 /*------MAIN---------*/
-
-
     .descripcion{
         font-size: 15px;
         margin: auto;
-
     }
     .precio{
-
         margin-right: 15%;
     }
     .cantidad-input{
         width: 10%;
         margin-top: 10%;
 }
-
-
 /*------MAIN---------*/
-
-    
-   
 body main .categorias-destacado{
     display: flex;
-    
     width: 90%;
-    
     margin: auto;
     margin-left: 10%;
-    
-    
 }
 
 body main .categorias-destacado .destacado02{
-    
     width: 45%;
-    
-    
 }
    
 .categorias-destacado .destacado02 .destacado{
-    
     border: #2757ff solid 1px;   
     box-shadow: 1px 2px 10px #2757ff;
     margin-top: 3%;
 }
 
     body main .categorias-destacado .categorias02{
-        width: 45%;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 6px;
-       margin-top: 1px;
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px;
+    margin-top: 1px;
         
     }
     
-    body main .categorias-destacado .categorias02 .categoria-uno{
-        
-       align-self: flex-start;
-       height: 12vw;
-       border: #8d53fd solid 1px;   
-       box-shadow: 1px 2px 10px #8d53fd;
-
+    body main .categorias-destacado .categorias02 .categoria-uno{    
+    align-self: flex-start;
+    height: 12vw;
+    border: #8d53fd solid 1px;   
+    box-shadow: 1px 2px 10px #8d53fd;
     }
 
-    body main .categorias-destacado .categorias02 .categoria-dos{
-        
-        align-self: center;
-        height: 12vw;
-        box-shadow: 1px 2px 10px #87f234;
-        border: #87f234 solid 1px;
-        width: 100%;
-        
+    body main .categorias-destacado .categorias02 .categoria-dos{    
+    align-self: center;
+    height: 12vw;
+    box-shadow: 1px 2px 10px #87f234;
+    border: #87f234 solid 1px;
+    width: 100%;
      }
      body main .categorias-destacado .categorias02 .categoria-tres{
-        
-        align-self: flex-end;
-        height: 12vw;
-        box-shadow: 1px 2px 10px #faeb52;
-        border: #faeb52 solid 1px;
-        width: 100%;
+    align-self: flex-end;
+    height: 12vw;
+    box-shadow: 1px 2px 10px #faeb52;
+    border: #faeb52 solid 1px;
+    width: 100%;
     
-
-        /* Hasta aca llega la seccion de destacado y categorias con imagenes*/
+/* Hasta aca llega la seccion de destacado y categorias con imagenes*/
      }
-
 
      /*Seccion de lo mas destacado*/
 
-     body main .que-estas-buscando{
-         display: flex;
-         justify-content: space-around;
-         flex-wrap: wrap;
-         width: 90%;
+    body main .que-estas-buscando{
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     width: 90%;
          
         
      }
      body main .que-estas-buscando article{
-         margin-top: 30px;
-         width: 40%;
-         box-shadow: 1px 0px 10px #2757ff;
-         margin-bottom: 5px;
-         transition: all 0.4s;
+        margin-top: 30px;
+        width: 40%;
+        box-shadow: 1px 0px 10px #2757ff;
+        margin-bottom: 5px;
+        transition: all 0.4s;
     }
     body main .que-estas-buscando article:hover{
         box-shadow: 1px 0px 10px #01f174;
@@ -781,23 +775,17 @@ body main .categorias-destacado .destacado02{
 
 
     .suscribirse{
-
         width: 80%;
         display: flex;
         margin-left: 10%;
         justify-content: space-between;
-        
         border-radius: 5px;
-       
     }
     .suscribirse .enterate-novedades{
         width: 40%;
-        
-        
     }
     .suscribirse .correo-suscripcion{
         width: 60%;
-        
         padding: 5px;
     }
     .suscribirse .enterate-novedades h3{
@@ -865,19 +853,13 @@ body main .categorias-destacado .destacado02{
 @media (min-width:1000px){
 
     /*--HEADER--------*/
-
-    .barra1.iconos{
-
-        margin-right: -50px
-    }
     
-    .barra1 .iconos i{
-       margin-right: 15px;
+
+
+    .barra-busqueda:hover .input{
+        width: 480px;
+
     }
-
-
-
-
     /*------MAIN---------*/
     
     main .producto-principal{
