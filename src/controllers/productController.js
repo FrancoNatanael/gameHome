@@ -68,7 +68,7 @@ const productController = {
             .then(products =>
                 {
                     console.log(products)
-                    res.render('products/products',{products})
+                    res.render('products/products',{user:req.session.user,products})
                 
                 })
                 

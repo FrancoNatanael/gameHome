@@ -32,9 +32,11 @@ router.post('/registro',upload.single('avatar'),usersController.create);
 
 //Perfil de usuario
 router.get('/perfil',auth,usersController.profile);
+//Edit profile
+router.get('/editProfile',auth,usersController.editProfile)
 
 //Edición de perfil
-router.put('/editar/:id',upload.single('avatar'),usersController.editProfile);
+router.put('/editar/:id',upload.single('avatar'),usersController.editProfileProcess);
 
 
 module.exports= router;

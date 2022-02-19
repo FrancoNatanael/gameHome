@@ -100,29 +100,44 @@ const usersController = {
         res.render('users/userProfile',{user:req.session.user})
     },
 
-    editProfile: (req,res)=>{
+    editProfile:(req,res) =>{
 
-        let idReq = req.params.id
-		let  user= req.body
+        res.render('users/editProfile',{user:req.session.user})
+    },
 
-			if(req.file!=undefined){
-				user.avatar = req.file.filename
-			}
-			else if(req.file==undefined){
-				let  userImg =Users.findByPk(idReq).then(result=>{
-                    return result
-                })
-                
-                    user.avatar = userImg.avatar
-			}
-            Users.update(user, {
-                where: {
-                id : idReq
-            }}).then(()=>{
-                req.session.user= user
-                res.render('users/userProfile',{user:req.session.user})})
-                .catch(error => res.send(error));
-            
+    editProfileProcess: async (req,res)=>{
+
+        let userOld = await Users.findOne({where:{id:req.params.id}})
+
+        let userBody=req.body
+
+        if(req.file){
+            userBody.avatar=req.file.filename
+        }else{
+            userBody.avatar=userOld.avatar
+        }
+
+
+        let user = await Users.update({
+            firstName:req.body.firstName,
+            lastName:req.body.lastName,
+            email:req.body.email,
+            avatar:userBody.avatar
+        },
+        {
+            where:{
+                id:req.params.id
+            }
+        })
+
+        let userActualizado = await Users.findOne({where:{id:req.params.id}})
+       
+
+        if(userActualizado){
+            req.session.user=userActualizado
+        }
+
+        res.render('users/userProfile',{user:req.session.user})
     
     },
     //Borra lo que esté en session
