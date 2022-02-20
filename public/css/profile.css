@@ -1,23 +1,18 @@
 
-
-
-.contenido-perfil{
-    margin: auto;
-    width: 80%;
-    
-}
 .contenido-perfil img{
     display: block;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 30px;
     width: 70%;
-    max-width: 300px;
+    max-width: 300px;  
+    box-shadow: 1px 2px 10px #2757ff;
 }
+
 .contenido-perfil .avatar{
     display: block;
     margin: auto;
-    width: 65%;
+    width: 60%;
     margin-top: 20px;
     margin-bottom: 15px;
 }
@@ -31,18 +26,36 @@
 .perfil-img input{
     margin-top: 5px;
 }
-
-.perfil-datos-usuario form .campo-perfil{
-    margin-top: 15px;
+main .caracteristicas-perfil{
+    padding: 10px;
+    margin-top: 70px;
+    margin-bottom: 15px;
+    margin: auto;
 }
-.perfil-datos-usuario form .campo-perfil input{
-    padding: 2%;
+.caracteristicas h4{
+    margin-bottom: 6px;
 }
-
-.perfil-datos-usuario form button{
-    margin-top: 20px;
+main .caracteristicas-perfil ul{
+    list-style: none;
+    font-size: 18px;
 }
-
+main .caracteristicas-perfil li{
+    list-style: none;
+    font-size: 15px;
+}
+main .caracteristicas-perfil .color1{
+    padding: 5px;
+    background-color: gray;
+    width: 90%;
+    color: white;
+}
+main .caracteristicas-perfil .color2{
+    padding: 5px;
+    width: 90%;
+}
+main .perfil-datos-usuario{
+    margin-top: 13px;
+}
 
 @media (min-width:800px){
 
@@ -51,17 +64,28 @@
    display: flex;
    justify-content: space-around;
    margin-top: 30px;
-  
-    
+   margin: auto;
+   
+   
 }
 .contenido-perfil .perfil-img{
     margin-top: 34px;
+    margin-right: 0;
 }
 .perfil-datos-usuario{
-    padding: 50px;
+  padding: 10px;
 }
 .perfil-datos-usuario form .campo-perfil{
     margin-top: 25px;
 }
-
+main .caracteristicas-perfil{
+    top: 15px;
+    margin-top: 80px;
+    margin-left: 0;
+    width: auto;
+}
+main .caracteristicas-perfil h4{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
 }

@@ -52,7 +52,7 @@ const usersController = {
         Users.create(user).then(()=>{
             return res.redirect('/login')
         }).catch(error => res.send(error))
-            res.redirect('login')
+            res.redirect('/login')
 
         }else{
             res.render('users/register',{errors:errors.mapped(),old:req.body});

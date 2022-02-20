@@ -19,11 +19,10 @@
         
         
     </section>
-
     <section class="perfil-datos-usuario">
 
         <form action="/usuario/editar/<%= user.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
-
+            <h3>Editar perfil:</h3>
 
             <div class="campo-perfil">
             <label for="first_name">Nombre</label>
@@ -41,6 +40,7 @@
             </div>
 
         <div class="campo-perfil">
+            <label for="email">Fecha de nacimiento</label>
         <input type="date" value="<%= user.date %>">
             </div>
 
@@ -58,7 +58,6 @@
         <button type="submit">Guardar cambios</button></div>
 
         
-
         </form>
 
         <!--<div class="btn-form-eliminar">
@@ -70,7 +69,12 @@
     </section>
 
 </div>
+<section class="perfil-datos-usuario">
 
+    <p><i class="fas fa-chevron-circle-left"></i><a href="/usuario/perfil">Volver a mi perfil</a></p>
+
+
+  </section>
    </main>
 
    <%- include('../partials/footer')%>

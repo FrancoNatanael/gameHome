@@ -19,16 +19,33 @@
         
         
     </section>
+    <section class="caracteristicas-perfil">
+        <article>
+            <h4>Mis datos:</h4>
+            <ul>
+                <li class="color1">Nombre: <%= user.firstName%></li>
+                <li class="color2">Apellido: <%= user.lastName%></li>
+                <li class="color1">E-mail: <%= user.email%></li>
+                <li class="color2">Fecha de nacimiento: <%= user.date%></li> 
 
-    <section class="perfil-datos-usuario">
+               
+            </ul>
 
-      <p> <a href="/usuario/editProfile">Editar mis datos</a></p>
+            
 
-
+        </article>
     </section>
 
-</div>
 
+</div>
+<section class="perfil-datos-usuario">
+
+    <p><i class="fas fa-chevron-circle-left"></i><a href="/usuario/editProfile">Editar mis datos</a></p>
+
+
+  </section>
+
+<%- include('../partials/newsletter') %> 
    </main>
 
    <%- include('../partials/footer')%>
