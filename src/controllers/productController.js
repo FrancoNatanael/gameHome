@@ -109,6 +109,7 @@ const productController = {
             stock_min:req.body.stock_min,
             stock_max:req.body.stock_max,
             stock:req.body.stock,
+            section:req.body.section,
             categoryId:req.body.categoryId,
             colorId:req.body.colorId,
             brandId:req.body.brandId,
