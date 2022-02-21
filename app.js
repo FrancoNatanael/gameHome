@@ -52,7 +52,8 @@ app.use('/', productRutas);
 app.use('/usuario',usersRutas)
 
 //Error 404
-/*app.use((req,res,next)=>{
+app.use((req,res,next)=>{
     res.status(404).render("users/notFound")
 });
-*/
+
+

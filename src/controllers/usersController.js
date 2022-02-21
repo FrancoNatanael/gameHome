@@ -11,17 +11,21 @@ const usersController = {
     login:(req,res)=>{
         if(req.session.user){
             res.render('users/login',{user:req.session.user})
+        }else{
+            res.render('users/login')
         }
-        res.render('users/login')
+        
     },
 
     register: (req,res)=>{
 
         if(req.session.user){
             res.render('users/register',{user:req.session.user})
+        }else{
+            res.render('users/register')
         }
 
-        res.render('users/register')
+        
     },
 
     create: (req,res)=>{
@@ -50,9 +54,9 @@ const usersController = {
         }
         //Creación a través de la variable user con el create db
         Users.create(user).then(()=>{
-            return res.redirect('/login')
+            return res.redirect('/usuario/login')
         }).catch(error => res.send(error))
-            res.redirect('/login')
+           
 
         }else{
             res.render('users/register',{errors:errors.mapped(),old:req.body});
