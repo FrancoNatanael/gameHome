@@ -5,13 +5,8 @@
 
     <% for(let i=0;i<products.length;i++){ %>
      
-       
-             
-           
- 
-     
- 
-
+       <% if (products[i].section=='Destacado') { %>
+        
      <article>
         
         <img src="/images/<%=products[i].image%>"alt="">
@@ -24,6 +19,13 @@
     </div>
 
     </article>
+       <% } %>
+             
+           
+ 
+     
+ 
+
    
      <% } %>
      
